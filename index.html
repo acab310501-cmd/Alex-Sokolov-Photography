@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Sokolov — Street Photographer</title>
+    <title>Alex Sokolov — Уличный фотограф</title>
+    <meta name="description" content="Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография." />
+    <meta property="og:title" content="Alex Sokolov — Уличный фотограф" />
+    <meta property="og:description" content="Уличная фотография, портреты и визуальные истории из городов мира." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -1718,9 +1724,44 @@
             .featured-logos span { font-size: 0.7rem; letter-spacing: 2px; }
             section { padding: 60px 0; }
         }
+    
+/* ============================================================
+   ALEX SOKOLOV — PREMIUM POLISH PATCH
+   ============================================================ */
+:root {
+    --black: #0b0b0b;
+    --dark: #1a1a1a;
+    --gray: #2a2a2a;
+    --white: #f4f3ef;
+    --muted: #888;
+    --accent: #d8c300;
+    --yellow: #d8c300;
+    --orange: #d8c300;
+    --yellow-dim: rgba(216,195,0,.10);
+    --transition: .65s cubic-bezier(.22,1,.36,1);
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");mix-blend-mode:screen}
+.skip-link{position:fixed;left:16px;top:-60px;z-index:10000;padding:12px 18px;background:var(--accent);color:#111;border-radius:999px;font-weight:700;transition:top .25s}.skip-link:focus{top:16px}
+.preloader{position:fixed;inset:0;z-index:10001;display:grid;place-items:center;background:#0b0b0b;transition:opacity .8s ease,visibility .8s ease}.preloader.is-hidden{opacity:0;visibility:hidden}.preloader-mark{font:400 4rem/1 var(--font-heading);letter-spacing:8px;color:var(--accent);text-shadow:0 0 30px rgba(216,195,0,.35);animation:preloaderPulse 1.4s ease-in-out infinite}.preloader-bar{position:absolute;bottom:15%;width:min(240px,60vw);height:2px;background:#2a2a2a;overflow:hidden}.preloader-bar span{display:block;width:0;height:100%;background:var(--accent);animation:preloaderProgress 1.2s cubic-bezier(.22,1,.36,1) forwards}@keyframes preloaderPulse{50%{transform:scale(1.05);opacity:.7}}@keyframes preloaderProgress{to{width:100%}}
+.header-actions{display:flex;align-items:center;gap:18px}.lang-toggle{font-size:.68rem;letter-spacing:2px;color:var(--muted);padding:8px 0;transition:color var(--transition),transform var(--transition)}.lang-toggle:hover{color:var(--accent);transform:translateY(-2px)}
+.header{background:rgba(11,11,11,.68);border-bottom-color:rgba(255,255,255,.06)}.nav{gap:26px}.nav a{color:rgba(255,255,255,.48)}
+section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;opacity:.75}.section-title{letter-spacing:3px}.section-desc{color:var(--muted)}
+.hero-content>*{will-change:transform,opacity}.hero-title{letter-spacing:4px}.hero-description{max-width:560px;color:rgba(244,243,239,.65);font-weight:300}.hero::after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,#0b0b0b);pointer-events:none}
+.about-text{font-weight:300;color:rgba(244,243,239,.68)}.about-quote{border-left-color:var(--accent)}
+.service-card,.testimonial-card{background:linear-gradient(145deg,rgba(42,42,42,.72),rgba(22,22,22,.72));border:1px solid rgba(255,255,255,.07);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition)}.service-card:hover,.testimonial-card:hover{transform:translateY(-8px);border-color:rgba(216,195,0,.45);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.masonry-item{overflow:hidden;border-radius:12px;cursor:zoom-in;position:relative}.masonry-item img{transition:transform 1s cubic-bezier(.22,1,.36,1),filter 1s ease}.masonry-item::after{content:"";position:absolute;inset:10px;border:1px solid transparent;transition:border-color .5s ease,transform .7s cubic-bezier(.22,1,.36,1);pointer-events:none}.masonry-item:hover img{transform:scale(1.03);filter:saturate(.9) contrast(1.04)}.masonry-item:hover::after{border-color:var(--accent);transform:scale(.98)}
+.btn-primary,.submit-btn{background:var(--accent);color:#111;box-shadow:0 10px 30px rgba(216,195,0,.12);transition:transform var(--transition),box-shadow var(--transition)}.btn-primary:hover,.submit-btn:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(216,195,0,.2)}
+.lightbox{background:rgba(0,0,0,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.lightbox-image-wrap img{animation:lightboxIn .6s cubic-bezier(.22,1,.36,1)}@keyframes lightboxIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}.lightbox-nav{opacity:.35;transition:opacity var(--transition),transform var(--transition)}.lightbox-nav:hover{opacity:1;transform:scale(1.08)}
+.faq-question{transition:color var(--transition)}.faq-question:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (max-width:1024px){section{padding:110px 0}}@media (max-width:768px){section{padding:80px 0}.header-actions{gap:12px}.nav{padding-top:80px}.lang-toggle{position:absolute;right:72px;top:17px}.hero-title{letter-spacing:2px}.masonry{columns:2}}@media (max-width:480px){.masonry{columns:1}.lang-toggle{right:64px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader-mark">AS</div><div class="preloader-bar"><span></span></div></div>
 
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
@@ -1735,11 +1776,12 @@
                 <a href="#faq" data-section="faq">FAQ</a>
                 <a href="#contact" data-section="contact">Contact</a>
             </nav>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+            <div class="header-actions"><button class="lang-toggle" id="langToggle" type="button" aria-label="Переключить язык">EN</button><button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню" aria-expanded="false">☰</button></div>
         </div>
     </header>
 
     <!-- ========== HERO ========== -->
+    <main id="main-content">
     <section class="hero" id="hero">
         <div class="hero-bg hero-bg-parallax" id="heroBg"></div>
         <div class="hero-overlay"></div>
@@ -2062,6 +2104,8 @@
             </div>
         </div>
     </div>
+
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -2546,5 +2590,64 @@
             console.log('🔥 Alex Sokolov — Street Photography | Premium Edition • UI Polish Complete');
         })();
     </script>
+
+<script>
+(function(){
+'use strict';
+const translations={
+ru:{
+metaTitle:'Alex Sokolov — Уличный фотограф',metaDescription:'Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография.',ogTitle:'Alex Sokolov — Уличный фотограф',ogDescription:'Уличная фотография, портреты и визуальные истории из городов мира.',
+nav:['Обо мне','Портфолио','Услуги','Процесс','Отзывы','FAQ','Контакты'],heroKicker:'Уличный фотограф',heroDesc:'Я ловлю ритм города через свет, движение и настоящие эмоции. Уже более семи лет я документирую улицы, людей и моменты, которые невозможно повторить.',viewPortfolio:'Смотреть портфолио',book:'Забронировать съёмку',years:'Лет',projects:'Проектов',clients:'Клиентов',location:'Европа • Работаю по всему миру',scroll:'Листайте',
+aboutLabel:'Обо мне',aboutTitle:'История за<br><span class="highlight">камерой</span>',aboutText:['Фотография для меня — это больше, чем красивые изображения. Это способ сохранить моменты, исчезающие за долю секунды.','Уже более семи лет я исследую города, культуры и повседневную жизнь в поисках настоящих эмоций, естественного света и историй, которые стоит запомнить.','Каждый кадр — это баланс композиции, атмосферы и эмоции. Моя цель — не просто документировать реальность, а заставить зрителя почувствовать себя внутри этого момента.'],skills:['Улица','Портрет','Путешествия','Архитектура','Документальная съёмка'],quote:'У каждой улицы есть история. Я просто жду правильного момента, чтобы её рассказать.',featured:'Избранное',trusted:'Мне доверяют<br><span class="highlight">во всём мире</span>',portfolio:'Портфолио',stories:'Истории <span class="highlight">улиц</span>',filters:['Все','Улица','Портрет','Детали'],services:'Услуги',servicesTitle:'Фотография<br><span class="highlight">для каждой истории.</span>',servicesDesc:'Каждая съёмка тщательно продумывается, чтобы создать естественные, выразительные и неподвластные времени фотографии.',process:'Как это работает',processTitle:'4 шага <span class="highlight">к кадру</span>',testimonials:'Отзывы',voices:'Голоса <span class="highlight">клиентов</span>',faq:'FAQ',faqTitle:'Часто <span class="highlight">спрашивают</span>',contact:'Контакты',contactTitle:'Давайте <span class="highlight">снимем</span>',contactHead:'Связаться со мной',contactDesc:'Пишите, звоните или приезжайте — я всегда открыт новым проектам и смелым идеям.',city:'Москва / Санкт-Петербург',name:'Имя',phone:'Телефон',email:'Email',service:'Услуга',select:'Выберите услугу',message:'Сообщение',messagePlaceholder:'Расскажите о вашей идее...',consent:'Я согласен на обработку персональных данных',send:'Отправить сообщение',done:'Готово!',doneDesc:'Я свяжусь с вами в течение 24 часов, чтобы обсудить съёмку.',close:'Закрыть',footerTag:'Уличный фотограф',footerDesc:'Истории через свет, эмоции и моменты, неподвластные времени.',
+servicesData:[['Уличный портрет','Идеально для личных портретов с настоящей городской атмосферой','от €250',['1,5 часа съёмки','40+ обработанных фото','Онлайн-галерея','Готовность за 5 дней']],['Истории города','Документальная фотография, которая ловит повседневную жизнь и настоящие эмоции','от €400',['3 часа съёмки','80+ обработанных фото','Онлайн-галерея','Готовность за 7 дней']],['Путешествие','Исследуем город вместе и создаём кинематографичные воспоминания в уникальных местах','от €600',['Полный съёмочный день','150+ обработанных фото','Онлайн-галерея','Готовность за 10 дней']]],
+steps:[['Идея','Обсуждаем концепцию, настроение и локацию съёмки.'],['Встреча и локация','Изучаем место и выбираем лучшие ракурсы и свет.'],['Съёмка','Работаем в потоке, ловим эмоции и свет. Без постановки.'],['Обработка и выдача','Я отбираю, обрабатываю и вовремя передаю финальные изображения.']],
+portfolio:[['Ритм города','Лондон, Великобритания'],['Уличный портрет','Берлин, Германия'],['Фактура стены','Париж, Франция'],['Туманное утро','Прага, Чехия'],['Прохожий','Токио, Япония'],['Переулок','Нью-Йорк, США'],['Окна','Амстердам, Нидерланды'],['Взгляд','Москва, Россия'],['Ночной проспект','Париж, Франция'],['Тени','Барселона, Испания'],['Музыкант','Новый Орлеан, США'],['Дождь в городе','Лондон, Великобритания']],
+testimonials:[['Алекс снимал моё выступление — это были лучшие концертные фотографии в моей жизни. Он на 100% чувствует ритм и эмоции.','Илья М.','Музыкант'],['Мы пригласили Алекса для новой коллекции одежды. Результат превзошёл ожидания: каждый кадр дышит атмосферой города.','Анна К.','Бренд-дизайнер'],['Алекс помог нам создать потрясающий контент для соцсетей. Кадры живые, настоящие и без постановки.','Максим Р.','Блогер, 500K+'],['Работа с Алексом всегда наполнена драйвом и свободой. Он не вмешивается — просто наблюдает и ловит магические моменты.','София Д.','Креативный продюсер']],faq:[['Как вы выбираете локацию для съёмки?','Я помогаю выбрать места, которые соответствуют вашей задумке — от тихих двориков до оживлённых проспектов. Главное, чтобы место резонировало с историей, которую мы хотим рассказать.'],['Сколько фотографий я получу?','В зависимости от формата — от 40 до 150+ фотографий. Все кадры проходят ручную цветокоррекцию и ретушь.'],['Можно ли изменить стиль обработки?','Конечно. Я работаю в разных стилях — от глубокого чёрно-белого до тёплой плёночной эстетики. Всё обсуждаем до съёмки.'],['Есть ли скидки на большие проекты?','Да. Для долгосрочного сотрудничества и крупных заказов действует гибкая система скидок. Обсудим детали лично.']]
+},
+en:{metaTitle:'Alex Sokolov — Street Photographer',metaDescription:'Alex Sokolov is a street photographer creating cinematic city stories, portraits and documentary images.',ogTitle:'Alex Sokolov — Street Photographer',ogDescription:'Street photography, portraits and visual stories from cities around the world.',nav:['About','Portfolio','Services','Process','Testimonials','FAQ','Contact'],heroKicker:'Street Photographer',heroDesc:'I capture the rhythm of the city through light, movement, and genuine emotions. For over seven years I have been documenting streets, people, and moments that can never be repeated.',viewPortfolio:'View Portfolio',book:'Book a Session',years:'Years',projects:'Projects',clients:'Clients',location:'Based in Europe • Available Worldwide',scroll:'Scroll',aboutLabel:'About',aboutTitle:'The Story Behind<br><span class="highlight">the Camera</span>',aboutText:['Photography, for me, is more than creating beautiful images. It is about preserving moments that disappear in a fraction of a second.','For over seven years I have explored cities, cultures and everyday life, searching for authentic emotions, natural light and stories that deserve to be remembered.','Every photograph is a balance between composition, atmosphere and emotion. My goal is not only to document reality, but to make people feel as if they were standing inside that very moment.'],skills:['Street','Portrait','Travel','Architecture','Documentary'],quote:'Every street has a story. I simply wait for the right moment to tell it.',featured:'Featured In',trusted:'Trusted by brands<br><span class="highlight">around the world</span>',portfolio:'Portfolio',stories:'Street <span class="highlight">Stories</span>',filters:['All','Street','Portrait','Detail'],services:'Services',servicesTitle:'Photography tailored<br><span class="highlight">to every story.</span>',servicesDesc:'Every session is carefully planned to create natural, timeless and expressive photographs.',process:'How It Works',processTitle:'4 Steps <span class="highlight">to a Frame</span>',testimonials:'Testimonials',voices:'Client <span class="highlight">Voices</span>',faq:'FAQ',faqTitle:'Frequently <span class="highlight">Asked</span>',contact:'Contact',contactTitle:"Let's <span class=\"highlight\">Shoot</span>",contactHead:'Get in Touch',contactDesc:"Write, call, or visit — I'm always open to new projects and bold ideas.",city:'Moscow / Saint Petersburg',name:'Name',phone:'Phone',email:'Email',service:'Service',select:'Select a service',message:'Message',messagePlaceholder:'Tell me about your idea...',consent:'I agree to the processing of personal data',send:'Send Message',done:'Done!',doneDesc:"I'll get back to you within 24 hours to discuss your shoot.",close:'Close',footerTag:'Street Photographer',footerDesc:'Capturing stories through light, emotion and timeless moments.',servicesData:[['Street Portrait','Perfect for personal portraits with an authentic urban atmosphere.','from €250',['1.5 hour session','40+ edited photos','Online gallery','Delivery within 5 days']],['City Stories','Documentary photography that captures everyday life and genuine emotions.','from €400',['3 hour session','80+ edited photos','Online gallery','Delivery within 7 days']],['Travel Session','Explore a city together and create cinematic memories in unique locations.','from €600',['Full day session','150+ edited photos','Online gallery','Delivery within 10 days']]],steps:[['Idea','We discuss the concept, mood, and location for the shoot.'],['Meet & Location','We visit the site, choosing the best angles and light.'],['Shoot','We work in flow, capturing emotions and light. No posing.'],['Edit & Deliver','I select, edit, and deliver the final images on time.']],portfolio:[['City Rhythm','London, UK'],['Street Portrait','Berlin, DE'],['Wall Texture','Paris, FR'],['Foggy Morning','Prague, CZ'],['Passerby','Tokyo, JP'],['Back Alley','NYC, US'],['Windows','Amsterdam, NL'],['The Gaze','Moscow, RU'],['Night Avenue','Paris, FR'],['Shadows','Barcelona, ES'],['Musician','New Orleans, US'],['Rain in the City','London, UK']],testimonials:[['Alex shot my performance — those were the best concert photos of my life. He feels rhythm and emotion 100%.','Ilya M.','Musician'],['We hired Alex for our new clothing collection. The result exceeded expectations: every photo breathes the city atmosphere.','Anna K.','Brand Designer'],['Alex helped us create amazing content for social media. The shots are alive, unstaged, authentic.','Maxim R.','Blogger, 500K+'],["Working with Alex is always full of drive and freedom. He doesn't interfere, just observes and captures magical moments.",'Sofia D.','Creative Producer']],faq:[['How do you choose a location for the shoot?','I help select locations that match your vision — from quiet courtyards to bustling avenues. The key is that the place resonates with the story we want to tell.'],['How many photos will I receive?','Depending on the format: from 40 to 150+ stunning images. All photos go through manual color correction and retouching.'],['Can I change the editing style?','Absolutely! I work in various styles — from deep black and white to warm film aesthetics. We discuss everything before the shoot.'],['Are there discounts for large projects?','Yes, for long-term collaborations and large orders I offer a flexible discount system. Let\'s discuss the details personally.']]}
+};
+const D=translations;
+const get=(sel)=>document.querySelector(sel); const all=(sel)=>[...document.querySelectorAll(sel)];
+function setText(el, value){if(!el)return;if(value.includes('<'))el.innerHTML=value;else el.textContent=value;}
+function setLanguage(lang){const t=D[lang]||D.ru;document.documentElement.lang=lang;localStorage.setItem('alex-language',lang);document.title=t.metaTitle;get('meta[name="description"]').setAttribute('content',t.metaDescription);get('meta[property="og:title"]').setAttribute('content',t.ogTitle);get('meta[property="og:description"]').setAttribute('content',t.ogDescription);get('#langToggle').textContent=lang==='ru'?'EN':'RU';
+all('.nav a').forEach((a,i)=>setText(a,t.nav[i]));setText(get('.hero-kicker'),t.heroKicker);setText(get('.hero-description'),t.heroDesc);setText(get('.btn-primary'),t.viewPortfolio);setText(get('.btn-secondary'),t.book);all('.hero-stat small').forEach((e,i)=>setText(e,[t.years,t.projects,t.clients][i]));setText(get('#heroLocation'),t.location);setText(get('.hero-scroll span'),t.scroll);
+setText(get('#about .section-label'),t.aboutLabel);setText(get('#about .section-title'),t.aboutTitle);all('#about .about-text').forEach((e,i)=>setText(e,t.aboutText[i]));all('.skills span').forEach((e,i)=>setText(e,t.skills[i]));setText(get('.about-quote'),t.quote);setText(get('#featured .section-label'),t.featured);setText(get('#featured .section-title'),t.trusted);setText(get('#portfolio .section-label'),t.portfolio);setText(get('#portfolio .section-title'),t.stories);all('.filter-btn').forEach((e,i)=>setText(e,t.filters[i]));setText(get('#services .section-label'),t.services);setText(get('#services .section-title'),t.servicesTitle);setText(get('#services .section-desc'),t.servicesDesc);setText(get('#process .section-label'),t.process);setText(get('#process .section-title'),t.processTitle);setText(get('#testimonials .section-label'),t.testimonials);setText(get('#testimonials .section-title'),t.voices);setText(get('#faq .section-label'),t.faq);setText(get('#faq .section-title'),t.faqTitle);setText(get('#contact .section-label'),t.contact);setText(get('#contact .section-title'),t.contactTitle);setText(get('.contact-info h3'),t.contactHead);setText(get('.contact-info p'),t.contactDesc);setText(get('.contact-info .detail:last-child'), '📍 '+t.city);all('#contactForm label').forEach((e,i)=>{const a=[t.name,t.phone,t.email,t.service,t.message,t.consent];if(a[i])setText(e,a[i])});get('#formName').placeholder=lang==='ru'?'Ваше имя':'Your name';get('#formEmail').placeholder=lang==='ru'?'you@example.com':'you@example.com';get('#formComment').placeholder=t.messagePlaceholder;setText(get('#formService option[value=""]'),t.select);setText(get('.submit-btn'),t.send);setText(get('.modal-box h3'),t.done);setText(get('.modal-box p'),t.doneDesc);setText(get('#closeModal'),t.close);setText(get('.footer .tagline'),t.footerTag);setText(get('.footer .description'),t.footerDesc);setText(get('.lightbox-close'), '✕');get('.lightbox-close').setAttribute('aria-label',lang==='ru'?'Закрыть фото':'Close photo');get('#lightboxPrev').setAttribute('aria-label',lang==='ru'?'Предыдущее фото':'Previous photo');get('#lightboxNext').setAttribute('aria-label',lang==='ru'?'Следующее фото':'Next photo');
+renderServices(t);renderSteps(t);renderPortfolio(t,document.querySelector('.filter-btn.active')?.dataset.filter||'all');renderTestimonials(t);renderFAQ(t);
+}
+function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);all('.service-features',card).forEach(()=>{});card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
+function renderSteps(t){all('.timeline-item').forEach((el,i)=>{const d=t.steps[i];if(!d)return;setText(el.querySelector('h4'),d[0]);setText(el.querySelector('p'),d[1]);setText(el.querySelector('.step-num'),`${langCurrent==='ru'?'Шаг':'Step'} ${String(i+1).padStart(2,'0')}`)})}
+function renderPortfolio(t,filter){const data=window.__alexPortfolioData||[];const grid=get('#masonryGrid');if(!grid)return;const items=filter==='all'?data:data.filter(x=>x.category===filter);grid.innerHTML='';items.forEach((item)=>{const i=data.findIndex(x=>x.id===item.id);const el=document.createElement('div');el.className='masonry-item';el.dataset.category=item.category;el.innerHTML=`<img src="${item.img}" alt="${t.portfolio[i]?.[0]||item.title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover"><span class="item-tag">${t.portfolio[i]?.[0]||item.title}</span>`;el.addEventListener('click',()=>{window.__alexOpenLightbox?.(i)});grid.appendChild(el)});}
+function renderTestimonials(t){const track=get('#testimonialTrack');if(!track)return;track.innerHTML='';t.testimonials.forEach(x=>{const el=document.createElement('div');el.className='testimonial-slide';el.innerHTML=`<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>“${x[0]}”</blockquote><div class="author">${x[1]}</div><div class="role">${x[2]}</div></div>`;track.appendChild(el)})}
+function renderFAQ(t){const list=get('#faqList');if(!list)return;list.innerHTML='';t.faq.forEach((x,i)=>{const el=document.createElement('div');el.className='faq-item';el.innerHTML=`<button class="faq-question" aria-expanded="${i===0}">${x[0]}<span class="icon">+</span></button><div class="faq-answer">${x[1]}</div>`;const btn=el.querySelector('button');btn.addEventListener('click',()=>{const open=el.classList.contains('open');all('.faq-item').forEach(e=>{e.classList.remove('open');e.querySelector('button').setAttribute('aria-expanded','false')});if(!open){el.classList.add('open');btn.setAttribute('aria-expanded','true')}});list.appendChild(el)});list.firstElementChild?.classList.add('open')}
+let langCurrent=localStorage.getItem('alex-language')||'ru';
+const originalPortfolio=window.__alexPortfolioData;
+// Capture the portfolio dataset from the original inline script when available.
+if(!originalPortfolio){const imgs=all('#masonryGrid img');window.__alexPortfolioData=[]}
+const languageButton=get('#langToggle');languageButton?.addEventListener('click',()=>{langCurrent=langCurrent==='ru'?'en':'ru';setLanguage(langCurrent)});
+// Patch original data by reading its known runtime representation when possible.
+window.__alexPortfolioData=window.__alexPortfolioData||[];
+// Build from the original page's data URLs so the existing image set is preserved.
+const urls=[...document.querySelectorAll('#masonryGrid img')].map((img,i)=>({id:i+1,category:['street','portrait','detail','street','portrait','street','detail','portrait','street','detail','portrait','street'][i],img:img.src,title:img.alt,details:''}));
+if(urls.length)window.__alexPortfolioData=urls;
+// If the original script has already rendered the gallery, use its source image URLs from the cards.
+if(!window.__alexPortfolioData.length){const fallback=[
+'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80','https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80','https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80','https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80','https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80','https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80'];window.__alexPortfolioData=fallback.map((img,i)=>({id:i+1,category:['street','portrait','detail','street','portrait','street','detail','portrait','street','detail','portrait','street'][i],img,title:'',details:''}))}
+// Preserve lightbox behavior and improve accessibility/swipe.
+let lbIndex=0;let lbStartX=0;const lb=get('#lightbox');const lbImg=get('#lightboxImg');const lbTitle=get('#lightboxTitle');const lbDetails=get('#lightboxDetails');const lbCounter=get('#lightboxCounter');
+function openLB(i){lbIndex=i;updateLB();lb.classList.add('open');document.body.style.overflow='hidden';get('#lightboxClose')?.focus()}
+function updateLB(){const t=D[langCurrent],item=window.__alexPortfolioData[lbIndex];if(!item)return;lbImg.src=item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${window.__alexPortfolioData.length}`}
+function moveLB(dir){lbIndex=(lbIndex+dir+window.__alexPortfolioData.length)%window.__alexPortfolioData.length;updateLB()}
+window.__alexOpenLightbox=openLB;get('#lightboxPrev')?.addEventListener('click',()=>moveLB(-1));get('#lightboxNext')?.addEventListener('click',()=>moveLB(1));get('#lightboxClose')?.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''});lb?.addEventListener('touchstart',e=>{lbStartX=e.changedTouches[0].clientX},{passive:true});lb?.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lbStartX;if(Math.abs(dx)>50)moveLB(dx<0?1:-1)},{passive:true});
+all('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{setTimeout(()=>renderPortfolio(D[langCurrent],btn.dataset.filter),0)}));document.addEventListener('keydown',e=>{if(!lb?.classList.contains('open'))return;if(e.key==='ArrowRight')moveLB(1);if(e.key==='ArrowLeft')moveLB(-1);if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}});
+// Count-up stats once they enter the viewport.
+const countObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting||e.target.dataset.counted)return;e.target.dataset.counted='1';const raw=e.target.textContent.trim();const m=raw.match(/(\d+)/);if(!m)return;const target=+m[1],suffix=raw.replace(m[1],'');let n=0;const step=Math.max(1,Math.ceil(target/35));const tick=()=>{n=Math.min(target,n+step);e.target.textContent=n+suffix;if(n<target)requestAnimationFrame(tick)};tick()}),{threshold:.7});all('.number,.hero-stat span').forEach(e=>countObserver.observe(e));
+// Stagger all reveal children.
+all('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%6,5)*.08}s`});
+// Preloader.
+window.addEventListener('load',()=>setTimeout(()=>get('#preloader')?.classList.add('is-hidden'),500));
+setLanguage(langCurrent);
+})();
+</script>
+
 </body>
 </html>
