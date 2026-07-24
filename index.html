@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Sokolov — Уличный фотограф</title>
+    <title>Alex Sokolov | Street Photographer</title>
     <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
     <meta name="description" content="Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография." />
     <meta property="og:title" content="Alex Sokolov — Уличный фотограф" />
@@ -1899,7 +1899,9 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="street">Street</button>
                     <button class="filter-btn" data-filter="portrait">Portrait</button>
-                    <button class="filter-btn" data-filter="detail">Detail</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="night">Night</button>
+                    <button class="filter-btn" data-filter="black-white">B&W</button>
                 </div>
             </div>
             <div class="masonry" id="masonryGrid">
@@ -2138,20 +2140,24 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
             'use strict';
 
             // ========== DATA ==========
-            // Используем реальные изображения из папки images/
+            // Unified portfolio data with all available images - thumbnails for grid, full for lightbox
             const portfolioData = [
                 { id: 1, category: 'street', img: 'images/street_1_thumb.webp', full: 'images/street_1.webp', title: 'City Rhythm', details: 'Moscow, Russia' },
                 { id: 2, category: 'portrait', img: 'images/portrait_1_thumb.webp', full: 'images/portrait_1.webp', title: 'The Gaze', details: 'Europe' },
-                { id: 3, category: 'architecture', img: 'images/architecture_5_thumb.webp', full: 'images/architecture_5.webp', title: 'Vertical Lines', details: 'Europe' },
-                { id: 4, category: 'night', img: 'images/night_2_thumb.webp', full: 'images/night_2.webp', title: 'After Rain', details: 'Europe' },
-                { id: 5, category: 'street', img: 'images/street_4_thumb.webp', full: 'images/street_4.webp', title: 'Passing Through', details: 'Europe' },
-                { id: 6, category: 'black-white', img: 'images/black_white_4_thumb.webp', full: 'images/black_white_4.webp', title: 'Two Figures', details: 'Europe' },
-                { id: 7, category: 'architecture', img: 'images/architecture_6_thumb.webp', full: 'images/architecture_6.webp', title: 'Concrete Rhythm', details: 'Europe' },
-                { id: 8, category: 'portrait', img: 'images/portrait_2_thumb.webp', full: 'images/portrait_2.webp', title: 'Quiet Portrait', details: 'Europe' },
-                { id: 9, category: 'night', img: 'images/night_5_thumb.webp', full: 'images/night_5.webp', title: 'Night Walk', details: 'Europe' },
-                { id: 10, category: 'black-white', img: 'images/black_white_3_thumb.webp', full: 'images/black_white_3.webp', title: 'Street Energy', details: 'Europe' },
-                { id: 11, category: 'street', img: 'images/street_7_thumb.webp', full: 'images/street_7.webp', title: 'Purple Hour', details: 'Europe' },
-                { id: 12, category: 'architecture', img: 'images/architecture_4_thumb.webp', full: 'images/architecture_4.webp', title: 'City Horizon', details: 'Europe' }
+                { id: 3, category: 'architecture', img: 'images/architecture_1_thumb.webp', full: 'images/architecture_1.webp', title: 'Vertical Lines', details: 'Europe' },
+                { id: 4, category: 'night', img: 'images/night_1_thumb.webp', full: 'images/night_1.webp', title: 'Neon Reflections', details: 'Europe' },
+                { id: 5, category: 'street', img: 'images/street_2_thumb.webp', full: 'images/street_2.webp', title: 'Passing Through', details: 'Europe' },
+                { id: 6, category: 'black-white', img: 'images/black_white_1_thumb.webp', full: 'images/black_white_1.webp', title: 'Two Figures', details: 'Europe' },
+                { id: 7, category: 'architecture', img: 'images/architecture_2_thumb.webp', full: 'images/architecture_2.webp', title: 'Concrete Poetry', details: 'Europe' },
+                { id: 8, category: 'portrait', img: 'images/portrait_2_thumb.webp', full: 'images/portrait_2.webp', title: 'Quiet Moment', details: 'Europe' },
+                { id: 9, category: 'night', img: 'images/night_2_thumb.webp', full: 'images/night_2.webp', title: 'After Rain', details: 'Europe' },
+                { id: 10, category: 'black-white', img: 'images/black_white_2_thumb.webp', full: 'images/black_white_2.webp', title: 'Street Shadows', details: 'Europe' },
+                { id: 11, category: 'street', img: 'images/street_3_thumb.webp', full: 'images/street_3.webp', title: 'Urban Pulse', details: 'Europe' },
+                { id: 12, category: 'architecture', img: 'images/architecture_3_thumb.webp', full: 'images/architecture_3.webp', title: 'City Horizon', details: 'Europe' },
+                { id: 13, category: 'portrait', img: 'images/portrait_3_thumb.webp', full: 'images/portrait_3.webp', title: 'Silent Observer', details: 'Europe' },
+                { id: 14, category: 'street', img: 'images/street_4_thumb.webp', full: 'images/street_4.webp', title: 'Golden Hour', details: 'Europe' },
+                { id: 15, category: 'night', img: 'images/night_3_thumb.webp', full: 'images/night_3.webp', title: 'Night Lights', details: 'Europe' },
+                { id: 16, category: 'black-white', img: 'images/black_white_3_thumb.webp', full: 'images/black_white_3.webp', title: 'Monochrome Energy', details: 'Europe' }
             ];
 
             // ===== ГЛАВНОЕ: делаем данные доступными глобально =====
@@ -2345,7 +2351,8 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
             function updateLightbox() {
                 const item = currentItems[currentImageIndex];
                 if (!item) return;
-                lightboxImg.src = item.img;
+                // Use full resolution for lightbox
+                lightboxImg.src = item.full || item.img;
                 lightboxImg.alt = item.title;
                 lightboxTitle.textContent = item.title;
                 lightboxDetails.textContent = item.details || '—';
@@ -2611,24 +2618,24 @@ renderServices(t);renderSteps(t);renderPortfolio(t,document.querySelector('.filt
 function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
 function renderSteps(t){all('.timeline-item').forEach((el,i)=>{const d=t.steps[i];if(!d)return;setText(el.querySelector('h4'),d[0]);setText(el.querySelector('p'),d[1]);setText(el.querySelector('.step-num'),`${langCurrent==='ru'?'Шаг':'Step'} ${String(i+1).padStart(2,'0')}`)})}
 function renderPortfolio(t, filter){
-    // ===== ИСПРАВЛЕНО: используем глобальные данные =====
+    // Unified portfolio render using global data
     const data = window.__alexPortfolioData || [];
     const grid = get('#masonryGrid');
     if(!grid) return;
-    const items = filter === 'all' ? data : data.filter(x => x.category === filter);
+    const items = filter === 'all' ? data : data.filter(x => x.category === filter || (filter === 'detail' && x.category === 'architecture'));
     grid.innerHTML = '';
-    items.forEach((item) => {
-        const i = data.findIndex(x => x.id === item.id);
+    items.forEach((item, idx) => {
+        const globalIndex = data.findIndex(x => x.id === item.id);
         const el = document.createElement('div');
         el.className = 'masonry-item';
         el.dataset.category = item.category;
-        const title = (t.portfolio && t.portfolio[i]) ? t.portfolio[i][0] : item.title;
+        const title = (t.portfolio && t.portfolio[globalIndex]) ? t.portfolio[globalIndex][0] : item.title;
         el.innerHTML = `
             <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover">
             <span class="item-tag">${title}</span>
         `;
         el.addEventListener('click', () => {
-            window.__alexOpenLightbox && window.__alexOpenLightbox(i);
+            window.__alexOpenLightbox && window.__alexOpenLightbox(globalIndex);
         });
         grid.appendChild(el);
     });
