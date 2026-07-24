@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alex Sokolov — Уличный фотограф</title>
+    <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
     <meta name="description" content="Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография." />
     <meta property="og:title" content="Alex Sokolov — Уличный фотограф" />
     <meta property="og:description" content="Уличная фотография, портреты и визуальные истории из городов мира." />
@@ -280,7 +281,7 @@
             position: absolute;
             inset: 0;
             z-index: 0;
-            background: url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1600&q=80') center center / cover no-repeat;
+            background: url('images/hero.webp') center center / cover no-repeat;
             filter: grayscale(0.85) brightness(0.28) contrast(1.15);
             will-change: transform;
             transform: scale(1);
@@ -2137,30 +2138,18 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
 
             // ========== DATA ==========
             const portfolioData = [
-                { id: 1, category: 'street', img: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80',
-                    title: 'City Rhythm', details: 'London, UK • Sony A7 IV • 24mm' },
-                { id: 2, category: 'portrait', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-                    title: 'Street Portrait', details: 'Berlin, DE • 35mm • f/1.8' },
-                { id: 3, category: 'detail', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80',
-                    title: 'Wall Texture', details: 'Paris, FR • 50mm • f/2.8' },
-                { id: 4, category: 'street', img: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80',
-                    title: 'Foggy Morning', details: 'Prague, CZ • 28mm • f/4' },
-                { id: 5, category: 'portrait', img: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80',
-                    title: 'Passerby', details: 'Tokyo, JP • 50mm • f/1.4' },
-                { id: 6, category: 'street', img: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80',
-                    title: 'Back Alley', details: 'NYC, US • 35mm • f/2.8' },
-                { id: 7, category: 'detail', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80',
-                    title: 'Windows', details: 'Amsterdam, NL • 70mm • f/4' },
-                { id: 8, category: 'portrait', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-                    title: 'The Gaze', details: 'Moscow, RU • 85mm • f/1.8' },
-                { id: 9, category: 'street', img: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80',
-                    title: 'Night Avenue', details: 'Paris, FR • 24mm • f/2.8' },
-                { id: 10, category: 'detail', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80',
-                    title: 'Shadows', details: 'Barcelona, ES • 50mm • f/2' },
-                { id: 11, category: 'portrait', img: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80',
-                    title: 'Musician', details: 'New Orleans, US • 35mm • f/1.8' },
-                { id: 12, category: 'street', img: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80',
-                    title: 'Rain in the City', details: 'London, UK • 28mm • f/2.8' },
+                { id: 1, category: 'street', img: 'images/street_1_thumb.webp', full: 'images/street_1.webp', title: 'City Rhythm', details: 'Moscow, Russia' },
+                { id: 2, category: 'portrait', img: 'images/portrait_1_thumb.webp', full: 'images/portrait_1.webp', title: 'The Gaze', details: 'Europe' },
+                { id: 3, category: 'architecture', img: 'images/architecture_5_thumb.webp', full: 'images/architecture_5.webp', title: 'Vertical Lines', details: 'Europe' },
+                { id: 4, category: 'night', img: 'images/night_2_thumb.webp', full: 'images/night_2.webp', title: 'After Rain', details: 'Europe' },
+                { id: 5, category: 'street', img: 'images/street_4_thumb.webp', full: 'images/street_4.webp', title: 'Passing Through', details: 'Europe' },
+                { id: 6, category: 'black-white', img: 'images/black_white_4_thumb.webp', full: 'images/black_white_4.webp', title: 'Two Figures', details: 'Europe' },
+                { id: 7, category: 'architecture', img: 'images/architecture_6_thumb.webp', full: 'images/architecture_6.webp', title: 'Concrete Rhythm', details: 'Europe' },
+                { id: 8, category: 'portrait', img: 'images/portrait_2_thumb.webp', full: 'images/portrait_2.webp', title: 'Quiet Portrait', details: 'Europe' },
+                { id: 9, category: 'night', img: 'images/night_5_thumb.webp', full: 'images/night_5.webp', title: 'Night Walk', details: 'Europe' },
+                { id: 10, category: 'black-white', img: 'images/black_white_3_thumb.webp', full: 'images/black_white_3.webp', title: 'Street Energy', details: 'Europe' },
+                { id: 11, category: 'street', img: 'images/street_7_thumb.webp', full: 'images/street_7.webp', title: 'Purple Hour', details: 'Europe' },
+                { id: 12, category: 'architecture', img: 'images/architecture_4_thumb.webp', full: 'images/architecture_4.webp', title: 'City Horizon', details: 'Europe' }
             ];
 
             const testimonialsData = [{
@@ -2627,15 +2616,13 @@ const languageButton=get('#langToggle');languageButton?.addEventListener('click'
 // Patch original data by reading its known runtime representation when possible.
 window.__alexPortfolioData=window.__alexPortfolioData||[];
 // Build from the original page's data URLs so the existing image set is preserved.
-const urls=[...document.querySelectorAll('#masonryGrid img')].map((img,i)=>({id:i+1,category:['street','portrait','detail','street','portrait','street','detail','portrait','street','detail','portrait','street'][i],img:img.src,title:img.alt,details:''}));
-if(urls.length)window.__alexPortfolioData=urls;
+
 // If the original script has already rendered the gallery, use its source image URLs from the cards.
-if(!window.__alexPortfolioData.length){const fallback=[
-'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80','https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80','https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80','https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80','https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85f0b7?w=600&q=80','https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80','https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80'];window.__alexPortfolioData=fallback.map((img,i)=>({id:i+1,category:['street','portrait','detail','street','portrait','street','detail','portrait','street','detail','portrait','street'][i],img,title:'',details:''}))}
+if(!window.__alexPortfolioData.length){window.__alexPortfolioData=portfolioData;}
 // Preserve lightbox behavior and improve accessibility/swipe.
 let lbIndex=0;let lbStartX=0;const lb=get('#lightbox');const lbImg=get('#lightboxImg');const lbTitle=get('#lightboxTitle');const lbDetails=get('#lightboxDetails');const lbCounter=get('#lightboxCounter');
 function openLB(i){lbIndex=i;updateLB();lb.classList.add('open');document.body.style.overflow='hidden';get('#lightboxClose')?.focus()}
-function updateLB(){const t=D[langCurrent],item=window.__alexPortfolioData[lbIndex];if(!item)return;lbImg.src=item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${window.__alexPortfolioData.length}`}
+function updateLB(){const t=D[langCurrent],item=window.__alexPortfolioData[lbIndex];if(!item)return;lbImg.src=item.full || item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${window.__alexPortfolioData.length}`}
 function moveLB(dir){lbIndex=(lbIndex+dir+window.__alexPortfolioData.length)%window.__alexPortfolioData.length;updateLB()}
 window.__alexOpenLightbox=openLB;get('#lightboxPrev')?.addEventListener('click',()=>moveLB(-1));get('#lightboxNext')?.addEventListener('click',()=>moveLB(1));get('#lightboxClose')?.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''});lb?.addEventListener('touchstart',e=>{lbStartX=e.changedTouches[0].clientX},{passive:true});lb?.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lbStartX;if(Math.abs(dx)>50)moveLB(dx<0?1:-1)},{passive:true});
 all('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{setTimeout(()=>renderPortfolio(D[langCurrent],btn.dataset.filter),0)}));document.addEventListener('keydown',e=>{if(!lb?.classList.contains('open'))return;if(e.key==='ArrowRight')moveLB(1);if(e.key==='ArrowLeft')moveLB(-1);if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}});
