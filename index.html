@@ -1825,7 +1825,9 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
         <div class="container">
             <div class="about-grid">
                 <div class="about-left reveal">
-                    <div class="about-avatar">AS</div>
+                    <div class="about-avatar">
+                        <img src="images/about-photo.webp" alt="Alex Sokolov" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+                    </div>
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="number">7+</span>
@@ -2039,6 +2041,10 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
                     <div class="detail"><span class="icon">📞</span> +7 999 123-45-67</div>
                     <div class="detail"><span class="icon">✉️</span> street@alexsokolov.photo</div>
                     <div class="detail"><span class="icon">📍</span> Moscow / Saint Petersburg</div>
+                    <div class="detail" style="margin-top:12px;">
+                        <a href="https://wa.me/79996379079" target="_blank" style="color:var(--yellow);margin-right:16px;">WhatsApp</a>
+                        <a href="https://t.me/bairmin" target="_blank" style="color:var(--yellow);">Telegram</a>
+                    </div>
                 </div>
                 <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
                     <div class="form-row">
@@ -2633,7 +2639,8 @@ setText(get('#about .section-label'),t.aboutLabel);setText(get('#about .section-
       const priceEl = card.querySelector('.service-price');
       if (priceEl) priceEl.textContent = prices[i];
     });
-setText(get('#process .section-label'),t.process);setText(get('#process .section-title'),t.processTitle);setText(get('#testimonials .section-label'),t.testimonials);setText(get('#testimonials .section-title'),t.voices);setText(get('#faq .section-label'),t.faq);setText(get('#faq .section-title'),t.faqTitle);setText(get('#contact .section-label'),t.contact);setText(get('#contact .section-title'),t.contactTitle);setText(get('.contact-info h3'),t.contactHead);setText(get('.contact-info p'),t.contactDesc);setText(get('.contact-info .detail:last-child'), '📍 '+t.city);all('#contactForm label').forEach((e,i)=>{const a=[t.name,t.phone,t.email,t.service,t.message,t.consent];if(a[i])setText(e,a[i])});get('#formName').placeholder=lang==='ru'?'Ваше имя':'Your name';get('#formEmail').placeholder=lang==='ru'?'you@example.com':'you@example.com';get('#formComment').placeholder=t.messagePlaceholder;setText(get('#formService option[value=""]'),t.select);setText(get('.submit-btn'),t.send);setText(get('.modal-box h3'),t.done);setText(get('.modal-box p'),t.doneDesc);setText(get('#closeModal'),t.close);setText(get('.footer .tagline'),t.footerTag);setText(get('.footer .description'),t.footerDesc);setText(get('.lightbox-close'), '✕');get('.lightbox-close').setAttribute('aria-label',lang==='ru'?'Закрыть фото':'Close photo');get('#lightboxPrev').setAttribute('aria-label',lang==='ru'?'Предыдущее фото':'Previous photo');get('#lightboxNext').setAttribute('aria-label',lang==='ru'?'Следующее фото':'Next photo');
+      if (priceEl) priceEl.textContent = prices[i];
+    });setText(get('#process .section-label'),t.process);setText(get('#process .section-title'),t.processTitle);setText(get('#testimonials .section-label'),t.testimonials);setText(get('#testimonials .section-title'),t.voices);setText(get('#faq .section-label'),t.faq);setText(get('#faq .section-title'),t.faqTitle);setText(get('#contact .section-label'),t.contact);setText(get('#contact .section-title'),t.contactTitle);setText(get('.contact-info h3'),t.contactHead);setText(get('.contact-info p'),t.contactDesc);setText(get('.contact-info .detail:last-child'), '📍 '+t.city);all('#contactForm label').forEach((e,i)=>{const a=[t.name,t.phone,t.email,t.service,t.message,t.consent];if(a[i])setText(e,a[i])});get('#formName').placeholder=lang==='ru'?'Ваше имя':'Your name';get('#formEmail').placeholder=lang==='ru'?'you@example.com':'you@example.com';get('#formComment').placeholder=t.messagePlaceholder;setText(get('#formService option[value=""]'),t.select);setText(get('.submit-btn'),t.send);setText(get('.modal-box h3'),t.done);setText(get('.modal-box p'),t.doneDesc);setText(get('#closeModal'),t.close);setText(get('.footer .tagline'),t.footerTag);setText(get('.footer .description'),t.footerDesc);setText(get('.lightbox-close'), '✕');get('.lightbox-close').setAttribute('aria-label',lang==='ru'?'Закрыть фото':'Close photo');get('#lightboxPrev').setAttribute('aria-label',lang==='ru'?'Предыдущее фото':'Previous photo');get('#lightboxNext').setAttribute('aria-label',lang==='ru'?'Следующее фото':'Next photo');
 renderServices(t);renderSteps(t);renderPortfolio(t,document.querySelector('.filter-btn.active')?.dataset.filter||'all');renderTestimonials(t);renderFAQ(t);
 }
 function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
