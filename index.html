@@ -2644,7 +2644,12 @@ const countObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.
 // Stagger all reveal children.
 all('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%6,5)*.08}s`});
 // Preloader.
-window.addEventListener('load',()=>setTimeout(()=>get('#preloader')?.classList.add('is-hidden'),500));
+const hidePreloader=()=>{const preloader=document.getElementById('preloader');if(!preloader)return;preloader.classList.add('is-hidden');setTimeout(()=>preloader.remove(),900);};
+// Do not wait for every external image: a single slow/blocked image must not freeze the entire site.
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>setTimeout(hidePreloader,350),{once:true});
+else setTimeout(hidePreloader,350);
+window.addEventListener('load',hidePreloader,{once:true});
+setTimeout(hidePreloader,3000);
 setLanguage(langCurrent);
 })();
 </script>
