@@ -52,7 +52,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ========== CUSTOM SCROLLBAR ========== */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -67,7 +66,6 @@
             background: var(--orange);
         }
 
-        /* ========== SELECTION ========== */
         ::selection {
             background: var(--yellow);
             color: var(--black);
@@ -112,7 +110,6 @@
             padding: 0 24px;
         }
 
-        /* ========== UNIFORM SECTIONS ========== */
         section {
             padding: 120px 0;
         }
@@ -153,7 +150,6 @@
             text-align: center;
         }
 
-        /* ========== SCROLL REVEAL ========== */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -166,11 +162,21 @@
             transform: translateY(0);
         }
 
-        .reveal-delay-1 { transition-delay: 0.08s; }
-        .reveal-delay-2 { transition-delay: 0.16s; }
-        .reveal-delay-3 { transition-delay: 0.24s; }
-        .reveal-delay-4 { transition-delay: 0.32s; }
-        .reveal-delay-5 { transition-delay: 0.40s; }
+        .reveal-delay-1 {
+            transition-delay: 0.08s;
+        }
+        .reveal-delay-2 {
+            transition-delay: 0.16s;
+        }
+        .reveal-delay-3 {
+            transition-delay: 0.24s;
+        }
+        .reveal-delay-4 {
+            transition-delay: 0.32s;
+        }
+        .reveal-delay-5 {
+            transition-delay: 0.40s;
+        }
 
         /* ============================================================
                HEADER
@@ -290,11 +296,14 @@
         }
 
         @keyframes heroZoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.10) translate(-1.5%, -0.5%); }
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.10) translate(-1.5%, -0.5%);
+            }
         }
 
-        /* ===== Parallax ===== */
         .hero-bg-parallax {
             transform: translateY(0);
             transition: transform 0.1s linear;
@@ -451,11 +460,16 @@
         }
 
         @keyframes heroDrop {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes heroFade {
-            to { opacity: 1; }
+            to {
+                opacity: 1;
+            }
         }
 
         .hero-scroll {
@@ -482,8 +496,15 @@
         }
 
         @keyframes pulseDown {
-            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
-            50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 0.4;
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+                opacity: 1;
+            }
         }
 
         /* ============================================================
@@ -1639,21 +1660,57 @@
                 text-align: center;
                 gap: 40px;
             }
-            .about-left { align-items: center; }
-            .about-avatar { max-width: 260px; }
-            .about-text { max-width: 100%; }
-            .about-stats { justify-content: center; }
-            .about-quote { max-width: 100%; }
-            .about-right { align-items: center; text-align: center; }
-            .skills { justify-content: center; }
-            .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
-            .masonry { columns: 2 220px; }
-            .lightbox-prev { left: 10px; }
-            .lightbox-next { right: 10px; }
-            .lightbox-nav { width: 40px; height: 40px; font-size: 1rem; }
-            .footer-inner { flex-direction: column; align-items: center; text-align: center; }
-            .footer-left .description { max-width: 100%; }
-            .footer-copy { align-self: center; }
+            .about-left {
+                align-items: center;
+            }
+            .about-avatar {
+                max-width: 260px;
+            }
+            .about-text {
+                max-width: 100%;
+            }
+            .about-stats {
+                justify-content: center;
+            }
+            .about-quote {
+                max-width: 100%;
+            }
+            .about-right {
+                align-items: center;
+                text-align: center;
+            }
+            .skills {
+                justify-content: center;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .masonry {
+                columns: 2 220px;
+            }
+            .lightbox-prev {
+                left: 10px;
+            }
+            .lightbox-next {
+                right: 10px;
+            }
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-left .description {
+                max-width: 100%;
+            }
+            .footer-copy {
+                align-self: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1670,95 +1727,452 @@
                 padding: 24px;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             }
-            .nav.open { display: flex; }
-            .mobile-toggle { display: block; }
+            .nav.open {
+                display: flex;
+            }
+            .mobile-toggle {
+                display: block;
+            }
 
-            section { padding: 80px 0; }
+            section {
+                padding: 80px 0;
+            }
 
-            .hero-title { font-size: clamp(3.6rem, 14vw, 5.6rem); letter-spacing: 4px; }
-            .hero-stats { gap: 32px; }
-            .hero-stat span { font-size: 1.8rem; }
-            .hero-description { font-size: 0.95rem; }
+            .hero-title {
+                font-size: clamp(3.6rem, 14vw, 5.6rem);
+                letter-spacing: 4px;
+            }
+            .hero-stats {
+                gap: 32px;
+            }
+            .hero-stat span {
+                font-size: 1.8rem;
+            }
+            .hero-description {
+                font-size: 0.95rem;
+            }
 
-            .masonry { columns: 2 160px; column-gap: 12px; }
-            .masonry-item { margin-bottom: 12px; }
+            .masonry {
+                columns: 2 160px;
+                column-gap: 12px;
+            }
+            .masonry-item {
+                margin-bottom: 12px;
+            }
 
-            .services-grid { grid-template-columns: 1fr 1fr; }
-            .contact-form .form-row { grid-template-columns: 1fr; }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+            }
 
-            .timeline { padding-left: 28px; }
-            .timeline::before { left: 8px; }
-            .timeline-item { padding-left: 24px; }
-            .timeline-item::before { left: -26px; width: 14px; height: 14px; }
+            .timeline {
+                padding-left: 28px;
+            }
+            .timeline::before {
+                left: 8px;
+            }
+            .timeline-item {
+                padding-left: 24px;
+            }
+            .timeline-item::before {
+                left: -26px;
+                width: 14px;
+                height: 14px;
+            }
 
-            .testimonial-card { padding: 28px 20px; }
+            .testimonial-card {
+                padding: 28px 20px;
+            }
 
-            .lightbox { padding: 16px; }
-            .lightbox-close { top: 8px; right: 4px; }
-            .lightbox-nav { width: 36px; height: 36px; font-size: 0.8rem; }
-            .lightbox-prev { left: 4px; }
-            .lightbox-next { right: 4px; }
-            .lightbox-footer { flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+            .lightbox {
+                padding: 16px;
+            }
+            .lightbox-close {
+                top: 8px;
+                right: 4px;
+            }
+            .lightbox-nav {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            .lightbox-prev {
+                left: 4px;
+            }
+            .lightbox-next {
+                right: 4px;
+            }
+            .lightbox-footer {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                text-align: center;
+            }
 
-            .about-avatar { max-width: 200px; }
-            .about-stats { gap: 24px; }
-            .stat-item .number { font-size: 2rem; }
-            .featured-logos { gap: 28px; }
-            .featured-logos span { font-size: 0.9rem; letter-spacing: 3px; }
-            .featured { padding: 60px 0; }
+            .about-avatar {
+                max-width: 200px;
+            }
+            .about-stats {
+                gap: 24px;
+            }
+            .stat-item .number {
+                font-size: 2rem;
+            }
+            .featured-logos {
+                gap: 28px;
+            }
+            .featured-logos span {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+            }
+            .featured {
+                padding: 60px 0;
+            }
         }
 
         @media (max-width: 480px) {
-            .masonry { columns: 1; }
-            .services-grid { grid-template-columns: 1fr; }
-            .filter-buttons { gap: 6px; }
-            .filter-btn { padding: 4px 14px; font-size: 0.6rem; }
-            .hero-btn { padding: 12px 28px; font-size: 0.8rem; }
-            .about-stats { flex-wrap: wrap; gap: 16px; justify-content: center; }
-            .stat-item .number { font-size: 1.6rem; }
-            .section-title { font-size: 1.8rem; }
-            .success-modal .modal-box { padding: 28px 20px; }
-            .about-avatar { max-width: 160px; font-size: 3.2rem; }
-            .skills span { font-size: 0.6rem; padding: 4px 12px; }
-            .hero-stats { gap: 20px; }
-            .hero-stat span { font-size: 1.4rem; }
-            .featured-logos { gap: 18px; }
-            .featured-logos span { font-size: 0.7rem; letter-spacing: 2px; }
-            section { padding: 60px 0; }
+            .masonry {
+                columns: 1;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-buttons {
+                gap: 6px;
+            }
+            .filter-btn {
+                padding: 4px 14px;
+                font-size: 0.6rem;
+            }
+            .hero-btn {
+                padding: 12px 28px;
+                font-size: 0.8rem;
+            }
+            .about-stats {
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+            }
+            .stat-item .number {
+                font-size: 1.6rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .success-modal .modal-box {
+                padding: 28px 20px;
+            }
+            .about-avatar {
+                max-width: 160px;
+                font-size: 3.2rem;
+            }
+            .skills span {
+                font-size: 0.6rem;
+                padding: 4px 12px;
+            }
+            .hero-stats {
+                gap: 20px;
+            }
+            .hero-stat span {
+                font-size: 1.4rem;
+            }
+            .featured-logos {
+                gap: 18px;
+            }
+            .featured-logos span {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+            section {
+                padding: 60px 0;
+            }
         }
-    
-/* ============================================================
-   ALEX SOKOLOV — PREMIUM POLISH PATCH
-   ============================================================ */
-:root {
-    --black: #0b0b0b;
-    --dark: #1a1a1a;
-    --gray: #2a2a2a;
-    --white: #f4f3ef;
-    --muted: #888;
-    --accent: #d8c300;
-    --yellow: #d8c300;
-    --orange: #d8c300;
-    --yellow-dim: rgba(216,195,0,.10);
-    --transition: .65s cubic-bezier(.22,1,.36,1);
-}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");mix-blend-mode:screen}
-.skip-link{position:fixed;left:16px;top:-60px;z-index:10000;padding:12px 18px;background:var(--accent);color:#111;border-radius:999px;font-weight:700;transition:top .25s}.skip-link:focus{top:16px}
-.preloader{position:fixed;inset:0;z-index:10001;display:grid;place-items:center;background:#0b0b0b;transition:opacity .8s ease,visibility .8s ease}.preloader.is-hidden{opacity:0;visibility:hidden}.preloader-mark{font:400 4rem/1 var(--font-heading);letter-spacing:8px;color:var(--accent);text-shadow:0 0 30px rgba(216,195,0,.35);animation:preloaderPulse 1.4s ease-in-out infinite}.preloader-bar{position:absolute;bottom:15%;width:min(240px,60vw);height:2px;background:#2a2a2a;overflow:hidden}.preloader-bar span{display:block;width:0;height:100%;background:var(--accent);animation:preloaderProgress 1.2s cubic-bezier(.22,1,.36,1) forwards}@keyframes preloaderPulse{50%{transform:scale(1.05);opacity:.7}}@keyframes preloaderProgress{to{width:100%}}
-.header-actions{display:flex;align-items:center;gap:18px}.lang-toggle{font-size:.68rem;letter-spacing:2px;color:var(--muted);padding:8px 0;transition:color var(--transition),transform var(--transition)}.lang-toggle:hover{color:var(--accent);transform:translateY(-2px)}
-.header{background:rgba(11,11,11,.68);border-bottom-color:rgba(255,255,255,.06)}.nav{gap:26px}.nav a{color:rgba(255,255,255,.48)}
-section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;opacity:.75}.section-title{letter-spacing:3px}.section-desc{color:var(--muted)}
-.hero-content>*{will-change:transform,opacity}.hero-title{letter-spacing:4px}.hero-description{max-width:560px;color:rgba(244,243,239,.65);font-weight:300}.hero::after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,#0b0b0b);pointer-events:none}
-.about-text{font-weight:300;color:rgba(244,243,239,.68)}.about-quote{border-left-color:var(--accent)}
-.service-card,.testimonial-card{background:linear-gradient(145deg,rgba(42,42,42,.72),rgba(22,22,22,.72));border:1px solid rgba(255,255,255,.07);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition)}.service-card:hover,.testimonial-card:hover{transform:translateY(-8px);border-color:rgba(216,195,0,.45);box-shadow:0 30px 80px rgba(0,0,0,.35)}
-.masonry-item{overflow:hidden;border-radius:12px;cursor:zoom-in;position:relative}.masonry-item img{transition:transform 1s cubic-bezier(.22,1,.36,1),filter 1s ease}.masonry-item::after{content:"";position:absolute;inset:10px;border:1px solid transparent;transition:border-color .5s ease,transform .7s cubic-bezier(.22,1,.36,1);pointer-events:none}.masonry-item:hover img{transform:scale(1.03);filter:saturate(.9) contrast(1.04)}.masonry-item:hover::after{border-color:var(--accent);transform:scale(.98)}
-.btn-primary,.submit-btn{background:var(--accent);color:#111;box-shadow:0 10px 30px rgba(216,195,0,.12);transition:transform var(--transition),box-shadow var(--transition)}.btn-primary:hover,.submit-btn:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(216,195,0,.2)}
-.lightbox{background:rgba(0,0,0,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.lightbox-image-wrap img{animation:lightboxIn .6s cubic-bezier(.22,1,.36,1)}@keyframes lightboxIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}.lightbox-nav{opacity:.35;transition:opacity var(--transition),transform var(--transition)}.lightbox-nav:hover{opacity:1;transform:scale(1.08)}
-.faq-question{transition:color var(--transition)}.faq-question:hover{color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-@media (max-width:1024px){section{padding:110px 0}}@media (max-width:768px){section{padding:80px 0}.header-actions{gap:12px}.nav{padding-top:80px}.lang-toggle{position:absolute;right:72px;top:17px}.hero-title{letter-spacing:2px}.masonry{columns:2}}@media (max-width:480px){.masonry{columns:1}.lang-toggle{right:64px}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+        /* ============================================================
+           ALEX SOKOLOV — PREMIUM POLISH PATCH
+           ============================================================ */
+        :root {
+            --black: #0b0b0b;
+            --dark: #1a1a1a;
+            --gray: #2a2a2a;
+            --white: #f4f3ef;
+            --muted: #888;
+            --accent: #d8c300;
+            --yellow: #d8c300;
+            --orange: #d8c300;
+            --yellow-dim: rgba(216, 195, 0, .10);
+            --transition: .65s cubic-bezier(.22, 1, .36, 1);
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: .045;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+            mix-blend-mode: screen
+        }
+        .skip-link {
+            position: fixed;
+            left: 16px;
+            top: -60px;
+            z-index: 10000;
+            padding: 12px 18px;
+            background: var(--accent);
+            color: #111;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: top .25s
+        }
+        .skip-link:focus {
+            top: 16px
+        }
+        .preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 10001;
+            display: grid;
+            place-items: center;
+            background: #0b0b0b;
+            transition: opacity .8s ease, visibility .8s ease
+        }
+        .preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden
+        }
+        .preloader-mark {
+            font: 400 4rem/1 var(--font-heading);
+            letter-spacing: 8px;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(216, 195, 0, .35);
+            animation: preloaderPulse 1.4s ease-in-out infinite
+        }
+        .preloader-bar {
+            position: absolute;
+            bottom: 15%;
+            width: min(240px, 60vw);
+            height: 2px;
+            background: #2a2a2a;
+            overflow: hidden
+        }
+        .preloader-bar span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: var(--accent);
+            animation: preloaderProgress 1.2s cubic-bezier(.22, 1, .36, 1) forwards
+        }
+        @keyframes preloaderPulse {
+            50% {
+                transform: scale(1.05);
+                opacity: .7
+            }
+        }
+        @keyframes preloaderProgress {
+            to {
+                width: 100%
+            }
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px
+        }
+        .lang-toggle {
+            font-size: .68rem;
+            letter-spacing: 2px;
+            color: var(--muted);
+            padding: 8px 0;
+            transition: color var(--transition), transform var(--transition)
+        }
+        .lang-toggle:hover {
+            color: var(--accent);
+            transform: translateY(-2px)
+        }
+        .header {
+            background: rgba(11, 11, 11, .68);
+            border-bottom-color: rgba(255, 255, 255, .06)
+        }
+        .nav {
+            gap: 26px
+        }
+        .nav a {
+            color: rgba(255, 255, 255, .48)
+        }
+        section {
+            padding: 150px 0
+        }
+        .section-label {
+            color: var(--accent);
+            letter-spacing: 7px;
+            opacity: .75
+        }
+        .section-title {
+            letter-spacing: 3px
+        }
+        .section-desc {
+            color: var(--muted)
+        }
+        .hero-content>* {
+            will-change: transform, opacity
+        }
+        .hero-title {
+            letter-spacing: 4px
+        }
+        .hero-description {
+            max-width: 560px;
+            color: rgba(244, 243, 239, .65);
+            font-weight: 300
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 180px;
+            background: linear-gradient(transparent, #0b0b0b);
+            pointer-events: none
+        }
+        .about-text {
+            font-weight: 300;
+            color: rgba(244, 243, 239, .68)
+        }
+        .about-quote {
+            border-left-color: var(--accent)
+        }
+        .service-card,
+        .testimonial-card {
+            background: linear-gradient(145deg, rgba(42, 42, 42, .72), rgba(22, 22, 22, .72));
+            border: 1px solid rgba(255, 255, 255, .07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition)
+        }
+        .service-card:hover,
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(216, 195, 0, .45);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .35)
+        }
+        .masonry-item {
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: zoom-in;
+            position: relative
+        }
+        .masonry-item img {
+            transition: transform 1s cubic-bezier(.22, 1, .36, 1), filter 1s ease
+        }
+        .masonry-item::after {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border: 1px solid transparent;
+            transition: border-color .5s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+            pointer-events: none
+        }
+        .masonry-item:hover img {
+            transform: scale(1.03);
+            filter: saturate(.9) contrast(1.04)
+        }
+        .masonry-item:hover::after {
+            border-color: var(--accent);
+            transform: scale(.98)
+        }
+        .btn-primary,
+        .submit-btn {
+            background: var(--accent);
+            color: #111;
+            box-shadow: 0 10px 30px rgba(216, 195, 0, .12);
+            transition: transform var(--transition), box-shadow var(--transition)
+        }
+        .btn-primary:hover,
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 38px rgba(216, 195, 0, .2)
+        }
+        .lightbox {
+            background: rgba(0, 0, 0, .88);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px)
+        }
+        .lightbox-image-wrap img {
+            animation: lightboxIn .6s cubic-bezier(.22, 1, .36, 1)
+        }
+        @keyframes lightboxIn {
+            from {
+                opacity: 0;
+                transform: scale(.92)
+            }
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+        .lightbox-nav {
+            opacity: .35;
+            transition: opacity var(--transition), transform var(--transition)
+        }
+        .lightbox-nav:hover {
+            opacity: 1;
+            transform: scale(1.08)
+        }
+        .faq-question {
+            transition: color var(--transition)
+        }
+        .faq-question:hover {
+            color: var(--accent)
+        }
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px
+        }
+        @media (max-width:1024px) {
+            section {
+                padding: 110px 0
+            }
+        }
+        @media (max-width:768px) {
+            section {
+                padding: 80px 0
+            }
+            .header-actions {
+                gap: 12px
+            }
+            .nav {
+                padding-top: 80px
+            }
+            .lang-toggle {
+                position: absolute;
+                right: 72px;
+                top: 17px
+            }
+            .hero-title {
+                letter-spacing: 2px
+            }
+            .masonry {
+                columns: 2
+            }
+        }
+        @media (max-width:480px) {
+            .masonry {
+                columns: 1
+            }
+            .lang-toggle {
+                right: 64px
+            }
+        }
+        @media (prefers-reduced-motion:reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important
+            }
+        }
     </style>
 </head>
 <body>
@@ -1784,336 +2198,336 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
 
     <!-- ========== HERO ========== -->
     <main id="main-content">
-    <section class="hero" id="hero">
-        <div class="hero-bg hero-bg-parallax" id="heroBg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-kicker">Street Photographer</p>
-            <h1 class="hero-title">Alex<br /><span class="yellow">Sokolov</span></h1>
-            <p class="hero-description">
-                I capture the rhythm of the city through light, movement, and genuine emotions.
-                For over seven years I've been documenting streets, people, and moments that can never be repeated.
-            </p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn-primary">View Portfolio</a>
-                <a href="#contact" class="btn-secondary">Book a Session</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span>7+</span>
-                    <small>Years</small>
-                </div>
-                <div class="hero-stat">
-                    <span>200+</span>
-                    <small>Projects</small>
-                </div>
-                <div class="hero-stat">
-                    <span>100+</span>
-                    <small>Clients</small>
-                </div>
-            </div>
-            <p class="hero-location" id="heroLocation">Based in Europe • Available Worldwide ↓</p>
-        </div>
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <div class="line"></div>
-        </div>
-    </section>
-
-    <!-- ========== ABOUT ========== -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-left reveal">
-                    <div class="about-avatar">
-                        <img src="images/about-photo.webp" alt="Alex Sokolov" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="number">7+</span>
-                            <span class="label">Years</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="number">200+</span>
-                            <span class="label">Projects</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="number">100+</span>
-                            <span class="label">Clients</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-right reveal reveal-delay-1">
-                    <span class="section-label">About</span>
-                    <h2 class="section-title">The Story Behind<br><span class="highlight">the Camera</span></h2>
-                    <p class="about-text">
-                        Photography, for me, is more than creating beautiful images.<br />
-                        It is about preserving moments that disappear in a fraction of a second.
-                    </p>
-                    <p class="about-text" style="margin-top: 0;">
-                        For over seven years I have explored cities, cultures and everyday life,
-                        searching for authentic emotions, natural light and stories that deserve
-                        to be remembered.
-                    </p>
-                    <p class="about-text" style="margin-top: 0;">
-                        Every photograph is a balance between composition, atmosphere and emotion.
-                        My goal is not only to document reality, but to make people feel
-                        as if they were standing inside that very moment.
-                    </p>
-                    <div class="skills">
-                        <span>Street</span>
-                        <span>Portrait</span>
-                        <span>Travel</span>
-                        <span>Architecture</span>
-                        <span>Documentary</span>
-                    </div>
-                    <blockquote class="about-quote">
-                        Every street has a story. I simply wait for the right moment to tell it.
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FEATURED ========== -->
-    <section class="featured" id="featured">
-        <div class="container">
-            <span class="section-label">Featured In</span>
-            <h2 class="section-title">Trusted by brands<br><span class="highlight">around the world</span></h2>
-            <div class="featured-logos">
-                <span>Sony</span>
-                <span>Adobe</span>
-                <span>Vogue</span>
-                <span>Canon</span>
-                <span>National Geographic</span>
-            </div>
-            <hr class="featured-divider" />
-        </div>
-    </section>
-
-    <!-- ========== PORTFOLIO ========== -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="portfolio-header text-center reveal">
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Street <span class="highlight">Stories</span></h2>
-                <div class="filter-buttons" id="filterButtons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="street">Street</button>
-                    <button class="filter-btn" data-filter="portrait">Portrait</button>
-                    <button class="filter-btn" data-filter="architecture">Architecture</button>
-                    <button class="filter-btn" data-filter="night">Night</button>
-                    <button class="filter-btn" data-filter="black-white">B&W</button>
-                </div>
-            </div>
-            <div class="masonry" id="masonryGrid">
-                <!-- Injected by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SERVICES ========== -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="services-header text-center reveal">
-                <span class="section-label">Services</span>
-                <h2 class="section-title">Photography tailored<br><span class="highlight">to every story.</span></h2>
-                <p class="section-desc" style="margin: 6px auto 0;">
-                    Every session is carefully planned to create natural, timeless and expressive photographs.
+        <section class="hero" id="hero">
+            <div class="hero-bg hero-bg-parallax" id="heroBg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-kicker">Street Photographer</p>
+                <h1 class="hero-title">Alex<br /><span class="yellow">Sokolov</span></h1>
+                <p class="hero-description">
+                    I capture the rhythm of the city through light, movement, and genuine emotions.
+                    For over seven years I've been documenting streets, people, and moments that can never be repeated.
                 </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn-secondary">Book a Session</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span>7+</span>
+                        <small>Years</small>
+                    </div>
+                    <div class="hero-stat">
+                        <span>200+</span>
+                        <small>Projects</small>
+                    </div>
+                    <div class="hero-stat">
+                        <span>100+</span>
+                        <small>Clients</small>
+                    </div>
+                </div>
+                <p class="hero-location" id="heroLocation">Based in Europe • Available Worldwide ↓</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <h3>Street Portrait</h3>
-                    <p class="service-desc">Perfect for personal portraits with an authentic urban atmosphere.</p>
-                    <div class="service-price">from €250</div>
-                    <ul class="service-features">
-                        <li>1.5 hour session</li>
-                        <li>40+ edited photos</li>
-                        <li>Online gallery</li>
-                        <li>Delivery within 5 days</li>
-                    </ul>
-                    <a href="#contact" class="service-link">Book Session →</a>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <h3>City Stories</h3>
-                    <p class="service-desc">Documentary photography that captures everyday life and genuine emotions.</p>
-                    <div class="service-price">from €400</div>
-                    <ul class="service-features">
-                        <li>3 hour session</li>
-                        <li>80+ edited photos</li>
-                        <li>Online gallery</li>
-                        <li>Delivery within 7 days</li>
-                    </ul>
-                    <a href="#contact" class="service-link">Book Session →</a>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <h3>Travel Session</h3>
-                    <p class="service-desc">Explore a city together and create cinematic memories in unique locations.</p>
-                    <div class="service-price">from €600</div>
-                    <ul class="service-features">
-                        <li>Full day session</li>
-                        <li>150+ edited photos</li>
-                        <li>Online gallery</li>
-                        <li>Delivery within 10 days</li>
-                    </ul>
-                    <a href="#contact" class="service-link">Book Session →</a>
-                </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="line"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== PROCESS ========== -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">How It Works</span>
-                <h2 class="section-title">4 Steps <span class="highlight">to a Frame</span></h2>
+        <!-- ========== ABOUT ========== -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-left reveal">
+                        <div class="about-avatar">
+                            <img src="images/about-photo.webp" alt="Alex Sokolov" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="number">7+</span>
+                                <span class="label">Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="number">200+</span>
+                                <span class="label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="number">100+</span>
+                                <span class="label">Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right reveal reveal-delay-1">
+                        <span class="section-label">About</span>
+                        <h2 class="section-title">The Story Behind<br><span class="highlight">the Camera</span></h2>
+                        <p class="about-text">
+                            Photography, for me, is more than creating beautiful images.<br />
+                            It is about preserving moments that disappear in a fraction of a second.
+                        </p>
+                        <p class="about-text" style="margin-top: 0;">
+                            For over seven years I have explored cities, cultures and everyday life,
+                            searching for authentic emotions, natural light and stories that deserve
+                            to be remembered.
+                        </p>
+                        <p class="about-text" style="margin-top: 0;">
+                            Every photograph is a balance between composition, atmosphere and emotion.
+                            My goal is not only to document reality, but to make people feel
+                            as if they were standing inside that very moment.
+                        </p>
+                        <div class="skills">
+                            <span>Street</span>
+                            <span>Portrait</span>
+                            <span>Travel</span>
+                            <span>Architecture</span>
+                            <span>Documentary</span>
+                        </div>
+                        <blockquote class="about-quote">
+                            Every street has a story. I simply wait for the right moment to tell it.
+                        </blockquote>
+                    </div>
+                </div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item reveal reveal-delay-1">
-                    <span class="step-num">Step 01</span>
-                    <h4>Idea</h4>
-                    <p>We discuss the concept, mood, and location for the shoot.</p>
-                </div>
-                <div class="timeline-item reveal reveal-delay-2">
-                    <span class="step-num">Step 02</span>
-                    <h4>Meet & Location</h4>
-                    <p>We visit the site, choosing the best angles and light.</p>
-                </div>
-                <div class="timeline-item reveal reveal-delay-3">
-                    <span class="step-num">Step 03</span>
-                    <h4>Shoot</h4>
-                    <p>We work in flow, capturing emotions and light. No posing.</p>
-                </div>
-                <div class="timeline-item reveal reveal-delay-4">
-                    <span class="step-num">Step 04</span>
-                    <h4>Edit & Deliver</h4>
-                    <p>I select, edit, and deliver the final images on time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">Testimonials</span>
-                <h2 class="section-title">Client <span class="highlight">Voices</span></h2>
+        <!-- ========== FEATURED ========== -->
+        <section class="featured" id="featured">
+            <div class="container">
+                <span class="section-label">Featured In</span>
+                <h2 class="section-title">Trusted by brands<br><span class="highlight">around the world</span></h2>
+                <div class="featured-logos">
+                    <span>Sony</span>
+                    <span>Adobe</span>
+                    <span>Vogue</span>
+                    <span>Canon</span>
+                    <span>National Geographic</span>
+                </div>
+                <hr class="featured-divider" />
             </div>
-            <div class="testimonial-slider" id="testimonialSlider">
-                <div class="testimonial-track" id="testimonialTrack">
+        </section>
+
+        <!-- ========== PORTFOLIO ========== -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="portfolio-header text-center reveal">
+                    <span class="section-label">Portfolio</span>
+                    <h2 class="section-title">Street <span class="highlight">Stories</span></h2>
+                    <div class="filter-buttons" id="filterButtons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="street">Street</button>
+                        <button class="filter-btn" data-filter="portrait">Portrait</button>
+                        <button class="filter-btn" data-filter="architecture">Architecture</button>
+                        <button class="filter-btn" data-filter="night">Night</button>
+                        <button class="filter-btn" data-filter="black-white">B&W</button>
+                    </div>
+                </div>
+                <div class="masonry" id="masonryGrid">
                     <!-- Injected by JS -->
                 </div>
-                <div class="slider-controls">
-                    <button class="slider-btn" id="prevSlide">←</button>
-                    <button class="slider-btn" id="nextSlide">→</button>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES ========== -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services-header text-center reveal">
+                    <span class="section-label">Services</span>
+                    <h2 class="section-title">Photography tailored<br><span class="highlight">to every story.</span></h2>
+                    <p class="section-desc" style="margin: 6px auto 0;">
+                        Every session is carefully planned to create natural, timeless and expressive photographs.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FAQ ========== -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title">Frequently <span class="highlight">Asked</span></h2>
-            </div>
-            <div class="faq-list" id="faqList">
-                <!-- Injected by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Let's <span class="highlight">Shoot</span></h2>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info reveal">
-                    <h3>Get in Touch</h3>
-                    <p>Write, call, or visit — I'm always open to new projects and bold ideas.</p>
-                    <div class="detail"><span class="icon">📞</span> +7 999 123-45-67</div>
-                    <div class="detail"><span class="icon">✉️</span> street@alexsokolov.photo</div>
-                    <div class="detail"><span class="icon">📍</span> Moscow / Saint Petersburg</div>
-                    <div class="detail" style="margin-top:12px;">
-                        <a href="https://wa.me/79996379079" target="_blank" style="color:var(--yellow);margin-right:16px;">WhatsApp</a>
-                        <a href="https://t.me/bairmin" target="_blank" style="color:var(--yellow);">Telegram</a>
+                <div class="services-grid">
+                    <div class="service-card reveal reveal-delay-1">
+                        <h3>Street Portrait</h3>
+                        <p class="service-desc">Perfect for personal portraits with an authentic urban atmosphere.</p>
+                        <div class="service-price">from €250</div>
+                        <ul class="service-features">
+                            <li>1.5 hour session</li>
+                            <li>40+ edited photos</li>
+                            <li>Online gallery</li>
+                            <li>Delivery within 5 days</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Book Session →</a>
+                    </div>
+                    <div class="service-card reveal reveal-delay-2">
+                        <h3>City Stories</h3>
+                        <p class="service-desc">Documentary photography that captures everyday life and genuine emotions.</p>
+                        <div class="service-price">from €400</div>
+                        <ul class="service-features">
+                            <li>3 hour session</li>
+                            <li>80+ edited photos</li>
+                            <li>Online gallery</li>
+                            <li>Delivery within 7 days</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Book Session →</a>
+                    </div>
+                    <div class="service-card reveal reveal-delay-3">
+                        <h3>Travel Session</h3>
+                        <p class="service-desc">Explore a city together and create cinematic memories in unique locations.</p>
+                        <div class="service-price">from €600</div>
+                        <ul class="service-features">
+                            <li>Full day session</li>
+                            <li>150+ edited photos</li>
+                            <li>Online gallery</li>
+                            <li>Delivery within 10 days</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Book Session →</a>
                     </div>
                 </div>
-                <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
-                    <div class="form-row">
-                        <div>
-                            <label for="formName">Name</label>
-                            <input type="text" id="formName" placeholder="Your name" required />
+            </div>
+        </section>
+
+        <!-- ========== PROCESS ========== -->
+        <section class="process" id="process">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="section-label">How It Works</span>
+                    <h2 class="section-title">4 Steps <span class="highlight">to a Frame</span></h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal reveal-delay-1">
+                        <span class="step-num">Step 01</span>
+                        <h4>Idea</h4>
+                        <p>We discuss the concept, mood, and location for the shoot.</p>
+                    </div>
+                    <div class="timeline-item reveal reveal-delay-2">
+                        <span class="step-num">Step 02</span>
+                        <h4>Meet & Location</h4>
+                        <p>We visit the site, choosing the best angles and light.</p>
+                    </div>
+                    <div class="timeline-item reveal reveal-delay-3">
+                        <span class="step-num">Step 03</span>
+                        <h4>Shoot</h4>
+                        <p>We work in flow, capturing emotions and light. No posing.</p>
+                    </div>
+                    <div class="timeline-item reveal reveal-delay-4">
+                        <span class="step-num">Step 04</span>
+                        <h4>Edit & Deliver</h4>
+                        <p>I select, edit, and deliver the final images on time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TESTIMONIALS ========== -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="section-label">Testimonials</span>
+                    <h2 class="section-title">Client <span class="highlight">Voices</span></h2>
+                </div>
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <!-- Injected by JS -->
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" id="prevSlide">←</button>
+                        <button class="slider-btn" id="nextSlide">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="section-label">FAQ</span>
+                    <h2 class="section-title">Frequently <span class="highlight">Asked</span></h2>
+                </div>
+                <div class="faq-list" id="faqList">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="text-center reveal">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Let's <span class="highlight">Shoot</span></h2>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal">
+                        <h3>Get in Touch</h3>
+                        <p>Write, call, or visit — I'm always open to new projects and bold ideas.</p>
+                        <div class="detail"><span class="icon">📞</span> +7 999 123-45-67</div>
+                        <div class="detail"><span class="icon">✉️</span> street@alexsokolov.photo</div>
+                        <div class="detail"><span class="icon">📍</span> Moscow / Saint Petersburg</div>
+                        <div class="detail" style="margin-top:12px;">
+                            <a href="https://wa.me/79996379079" target="_blank" style="color:var(--yellow);margin-right:16px;">WhatsApp</a>
+                            <a href="https://t.me/bairmin" target="_blank" style="color:var(--yellow);">Telegram</a>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div>
+                                <label for="formName">Name</label>
+                                <input type="text" id="formName" placeholder="Your name" required />
+                            </div>
+                            <div>
+                                <label for="formPhone">Phone</label>
+                                <input type="tel" id="formPhone" placeholder="+7 999 123-45-67" required />
+                            </div>
                         </div>
                         <div>
-                            <label for="formPhone">Phone</label>
-                            <input type="tel" id="formPhone" placeholder="+7 999 123-45-67" required />
+                            <label for="formEmail">Email</label>
+                            <input type="email" id="formEmail" placeholder="you@example.com" required />
                         </div>
-                    </div>
-                    <div>
-                        <label for="formEmail">Email</label>
-                        <input type="email" id="formEmail" placeholder="you@example.com" required />
-                    </div>
-                    <div>
-                        <label for="formService">Service</label>
-                        <select id="formService">
-                            <option value="">Select a service</option>
-                            <option value="Street Portrait">Street Portrait</option>
-                            <option value="City Stories">City Stories</option>
-                            <option value="Travel Session">Travel Session</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="formComment">Message</label>
-                        <textarea id="formComment" placeholder="Tell me about your idea..."></textarea>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="formConsent" required />
-                        <label for="formConsent">I agree to the processing of personal data</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SUCCESS MODAL ========== -->
-    <div class="success-modal" id="successModal">
-        <div class="modal-box">
-            <canvas id="confetti-canvas"></canvas>
-            <span class="check">🔥</span>
-            <h3>Done!</h3>
-            <p>I'll get back to you within 24 hours to discuss your shoot.</p>
-            <button class="close-modal-btn" id="closeModal">Close</button>
-        </div>
-    </div>
-
-    <!-- ========== LIGHTBOX ========== -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-container">
-            <button class="lightbox-close" id="lightboxClose">✕</button>
-            <div class="lightbox-image-wrap">
-                <img src="" alt="Photo" id="lightboxImg" />
-                <button class="lightbox-nav lightbox-prev" id="lightboxPrev">←</button>
-                <button class="lightbox-nav lightbox-next" id="lightboxNext">→</button>
-            </div>
-            <div class="lightbox-footer">
-                <div class="lightbox-caption">
-                    <span class="title" id="lightboxTitle">Untitled</span>
-                    <span class="details" id="lightboxDetails">—</span>
+                        <div>
+                            <label for="formService">Service</label>
+                            <select id="formService">
+                                <option value="">Select a service</option>
+                                <option value="Street Portrait">Street Portrait</option>
+                                <option value="City Stories">City Stories</option>
+                                <option value="Travel Session">Travel Session</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="formComment">Message</label>
+                            <textarea id="formComment" placeholder="Tell me about your idea..."></textarea>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="formConsent" required />
+                            <label for="formConsent">I agree to the processing of personal data</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
-                <span class="lightbox-counter" id="lightboxCounter">1 / 12</span>
+            </div>
+        </section>
+
+        <!-- ========== SUCCESS MODAL ========== -->
+        <div class="success-modal" id="successModal">
+            <div class="modal-box">
+                <canvas id="confetti-canvas"></canvas>
+                <span class="check">🔥</span>
+                <h3>Done!</h3>
+                <p>I'll get back to you within 24 hours to discuss your shoot.</p>
+                <button class="close-modal-btn" id="closeModal">Close</button>
             </div>
         </div>
-    </div>
+
+        <!-- ========== LIGHTBOX ========== -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-container">
+                <button class="lightbox-close" id="lightboxClose">✕</button>
+                <div class="lightbox-image-wrap">
+                    <img src="" alt="Photo" id="lightboxImg" />
+                    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">←</button>
+                    <button class="lightbox-nav lightbox-next" id="lightboxNext">→</button>
+                </div>
+                <div class="lightbox-footer">
+                    <div class="lightbox-caption">
+                        <span class="title" id="lightboxTitle">Untitled</span>
+                        <span class="details" id="lightboxDetails">—</span>
+                    </div>
+                    <span class="lightbox-counter" id="lightboxCounter">1 / 12</span>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -2148,72 +2562,70 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
             // ========== DATA ==========
             // All available images from the folder - thumbnails for grid, full for lightbox
             const portfolioData = [
-                { id: 1, category: 'street', img: 'images/street_1_thumb.webp', full: 'images/street_1.webp', title: 'City Rhythm', details: 'Moscow, Russia' },
-                { id: 2, category: 'portrait', img: 'images/portrait_1_thumb.webp', full: 'images/portrait_1.webp', title: 'The Gaze', details: 'Europe' },
-                { id: 3, category: 'architecture', img: 'images/architecture_1_thumb.webp', full: 'images/architecture_1.webp', title: 'Vertical Lines', details: 'Europe' },
-                { id: 4, category: 'night', img: 'images/night_1_thumb.webp', full: 'images/night_1.webp', title: 'Neon Reflections', details: 'Europe' },
-                { id: 5, category: 'street', img: 'images/street_2_thumb.webp', full: 'images/street_2.webp', title: 'Passing Through', details: 'Europe' },
-                { id: 6, category: 'black-white', img: 'images/black_white_1_thumb.webp', full: 'images/black_white_1.webp', title: 'Two Figures', details: 'Europe' },
-                { id: 7, category: 'architecture', img: 'images/architecture_2_thumb.webp', full: 'images/architecture_2.webp', title: 'Concrete Poetry', details: 'Europe' },
-                { id: 8, category: 'portrait', img: 'images/portrait_2_thumb.webp', full: 'images/portrait_2.webp', title: 'Quiet Moment', details: 'Europe' },
-                { id: 9, category: 'night', img: 'images/night_2_thumb.webp', full: 'images/night_2.webp', title: 'After Rain', details: 'Europe' },
-                { id: 10, category: 'black-white', img: 'images/black_white_2_thumb.webp', full: 'images/black_white_2.webp', title: 'Street Shadows', details: 'Europe' },
-                { id: 11, category: 'street', img: 'images/street_3_thumb.webp', full: 'images/street_3.webp', title: 'Urban Pulse', details: 'Europe' },
-                { id: 12, category: 'architecture', img: 'images/architecture_3_thumb.webp', full: 'images/architecture_3.webp', title: 'City Horizon', details: 'Europe' },
-                { id: 13, category: 'portrait', img: 'images/portrait_3_thumb.webp', full: 'images/portrait_3.webp', title: 'Silent Observer', details: 'Europe' },
-                { id: 14, category: 'street', img: 'images/street_4_thumb.webp', full: 'images/street_4.webp', title: 'Golden Hour', details: 'Europe' },
-                { id: 15, category: 'night', img: 'images/night_3_thumb.webp', full: 'images/night_3.webp', title: 'Night Lights', details: 'Europe' },
-                { id: 16, category: 'black-white', img: 'images/black_white_3_thumb.webp', full: 'images/black_white_3.webp', title: 'Monochrome Energy', details: 'Europe' },
-                { id: 17, category: 'architecture', img: 'images/architecture_4_thumb.webp', full: 'images/architecture_4.webp', title: 'Modern Lines', details: 'Europe' },
-                { id: 18, category: 'portrait', img: 'images/portrait_4_thumb.webp', full: 'images/portrait_4.webp', title: 'Street Portrait', details: 'Europe' },
-                { id: 19, category: 'night', img: 'images/night_4_thumb.webp', full: 'images/night_4.webp', title: 'City Glow', details: 'Europe' },
-                { id: 20, category: 'street', img: 'images/street_5_thumb.webp', full: 'images/street_5.webp', title: 'Evening Walk', details: 'Europe' },
-                { id: 21, category: 'black-white', img: 'images/black_white_4_thumb.webp', full: 'images/black_white_4.webp', title: 'Timeless Moment', details: 'Europe' },
-                { id: 22, category: 'architecture', img: 'images/architecture_5_thumb.webp', full: 'images/architecture_5.webp', title: 'Urban Geometry', details: 'Europe' },
-                { id: 23, category: 'portrait', img: 'images/portrait_5_thumb.webp', full: 'images/portrait_5.webp', title: 'The Observer', details: 'Europe' },
-                { id: 24, category: 'street', img: 'images/street_6_thumb.webp', full: 'images/street_6.webp', title: 'Rush Hour', details: 'Europe' },
-                { id: 25, category: 'night', img: 'images/night_5_thumb.webp', full: 'images/night_5.webp', title: 'Night Pulse', details: 'Europe' },
-                { id: 26, category: 'black-white', img: 'images/black_white_5_thumb.webp', full: 'images/black_white_5.webp', title: 'Shadow Play', details: 'Europe' },
-                { id: 27, category: 'architecture', img: 'images/architecture_6_thumb.webp', full: 'images/architecture_6.webp', title: 'Towering Forms', details: 'Europe' },
-                { id: 28, category: 'portrait', img: 'images/portrait_6_thumb.webp', full: 'images/portrait_6.webp', title: 'Quiet Strength', details: 'Europe' },
-                { id: 29, category: 'street', img: 'images/street_7_thumb.webp', full: 'images/street_7.webp', title: 'Purple Hour', details: 'Europe' },
-                { id: 30, category: 'street', img: 'images/street_8_thumb.webp', full: 'images/street_8.webp', title: 'Final Frame', details: 'Europe' }
+                { id: 1, category: 'street', img: 'images/street_1_thumb.webp', full: 'images/street_1.webp',
+                    title: 'City Rhythm', details: 'Moscow, Russia' },
+                { id: 2, category: 'portrait', img: 'images/portrait_1_thumb.webp', full: 'images/portrait_1.webp',
+                    title: 'The Gaze', details: 'Europe' },
+                { id: 3, category: 'architecture', img: 'images/architecture_1_thumb.webp',
+                    full: 'images/architecture_1.webp', title: 'Vertical Lines', details: 'Europe' },
+                { id: 4, category: 'night', img: 'images/night_1_thumb.webp', full: 'images/night_1.webp',
+                    title: 'Neon Reflections', details: 'Europe' },
+                { id: 5, category: 'street', img: 'images/street_2_thumb.webp', full: 'images/street_2.webp',
+                    title: 'Passing Through', details: 'Europe' },
+                { id: 6, category: 'black-white', img: 'images/black_white_1_thumb.webp',
+                    full: 'images/black_white_1.webp', title: 'Two Figures', details: 'Europe' },
+                { id: 7, category: 'architecture', img: 'images/architecture_2_thumb.webp',
+                    full: 'images/architecture_2.webp', title: 'Concrete Poetry', details: 'Europe' },
+                { id: 8, category: 'portrait', img: 'images/portrait_2_thumb.webp', full: 'images/portrait_2.webp',
+                    title: 'Quiet Moment', details: 'Europe' },
+                { id: 9, category: 'night', img: 'images/night_2_thumb.webp', full: 'images/night_2.webp',
+                    title: 'After Rain', details: 'Europe' },
+                { id: 10, category: 'black-white', img: 'images/black_white_2_thumb.webp',
+                    full: 'images/black_white_2.webp', title: 'Street Shadows', details: 'Europe' },
+                { id: 11, category: 'street', img: 'images/street_3_thumb.webp', full: 'images/street_3.webp',
+                    title: 'Urban Pulse', details: 'Europe' },
+                { id: 12, category: 'architecture', img: 'images/architecture_3_thumb.webp',
+                    full: 'images/architecture_3.webp', title: 'City Horizon', details: 'Europe' },
+                { id: 13, category: 'portrait', img: 'images/portrait_3_thumb.webp', full: 'images/portrait_3.webp',
+                    title: 'Silent Observer', details: 'Europe' },
+                { id: 14, category: 'street', img: 'images/street_4_thumb.webp', full: 'images/street_4.webp',
+                    title: 'Golden Hour', details: 'Europe' },
+                { id: 15, category: 'night', img: 'images/night_3_thumb.webp', full: 'images/night_3.webp',
+                    title: 'Night Lights', details: 'Europe' },
+                { id: 16, category: 'black-white', img: 'images/black_white_3_thumb.webp',
+                    full: 'images/black_white_3.webp', title: 'Monochrome Energy', details: 'Europe' },
+                { id: 17, category: 'architecture', img: 'images/architecture_4_thumb.webp',
+                    full: 'images/architecture_4.webp', title: 'Modern Lines', details: 'Europe' },
+                { id: 18, category: 'portrait', img: 'images/portrait_4_thumb.webp', full: 'images/portrait_4.webp',
+                    title: 'Street Portrait', details: 'Europe' },
+                { id: 19, category: 'night', img: 'images/night_4_thumb.webp', full: 'images/night_4.webp',
+                    title: 'City Glow', details: 'Europe' },
+                { id: 20, category: 'street', img: 'images/street_5_thumb.webp', full: 'images/street_5.webp',
+                    title: 'Evening Walk', details: 'Europe' },
+                { id: 21, category: 'black-white', img: 'images/black_white_4_thumb.webp',
+                    full: 'images/black_white_4.webp', title: 'Timeless Moment', details: 'Europe' },
+                { id: 22, category: 'architecture', img: 'images/architecture_5_thumb.webp',
+                    full: 'images/architecture_5.webp', title: 'Urban Geometry', details: 'Europe' },
+                { id: 23, category: 'portrait', img: 'images/portrait_5_thumb.webp', full: 'images/portrait_5.webp',
+                    title: 'The Observer', details: 'Europe' },
+                { id: 24, category: 'street', img: 'images/street_6_thumb.webp', full: 'images/street_6.webp',
+                    title: 'Rush Hour', details: 'Europe' },
+                { id: 25, category: 'night', img: 'images/night_5_thumb.webp', full: 'images/night_5.webp',
+                    title: 'Night Pulse', details: 'Europe' },
+                { id: 26, category: 'black-white', img: 'images/black_white_5_thumb.webp',
+                    full: 'images/black_white_5.webp', title: 'Shadow Play', details: 'Europe' },
+                { id: 27, category: 'architecture', img: 'images/architecture_6_thumb.webp',
+                    full: 'images/architecture_6.webp', title: 'Towering Forms', details: 'Europe' },
+                { id: 28, category: 'portrait', img: 'images/portrait_6_thumb.webp', full: 'images/portrait_6.webp',
+                    title: 'Quiet Strength', details: 'Europe' },
+                { id: 29, category: 'street', img: 'images/street_7_thumb.webp', full: 'images/street_7.webp',
+                    title: 'Purple Hour', details: 'Europe' },
+                { id: 30, category: 'street', img: 'images/street_8_thumb.webp', full: 'images/street_8.webp',
+                    title: 'Final Frame', details: 'Europe' }
             ];
 
             // ===== ГЛАВНОЕ: делаем данные доступными глобально =====
             window.__alexPortfolioData = portfolioData;
-
-            const testimonialsData = [{
-                text: 'Alex shot my performance — those were the best concert photos of my life. He feels rhythm and emotion 100%.',
-                author: 'Ilya M.',
-                role: 'Musician'
-            }, {
-                text: 'We hired Alex for our new clothing collection. The result exceeded expectations: every photo breathes the city atmosphere.',
-                author: 'Anna K.',
-                role: 'Brand Designer'
-            }, {
-                text: 'Alex helped us create amazing content for social media. The shots are alive, unstaged, authentic.',
-                author: 'Maxim R.',
-                role: 'Blogger, 500K+'
-            }, {
-                text: 'Working with Alex is always full of drive and freedom. He doesn\'t interfere, just observes and captures magical moments.',
-                author: 'Sofia D.',
-                role: 'Creative Producer'
-            }, ];
-
-            const faqData = [{
-                q: 'How do you choose a location for the shoot?',
-                a: 'I help select locations that match your vision — from quiet courtyards to bustling avenues. The key is that the place resonates with the story we want to tell.'
-            }, {
-                q: 'How many photos will I receive?',
-                a: 'Depending on the format: from 40 to 150+ stunning images. All photos go through manual color correction and retouching.'
-            }, {
-                q: 'Can I change the editing style?',
-                a: 'Absolutely! I work in various styles — from deep black and white to warm film aesthetics. We discuss everything before the shoot.'
-            }, {
-                q: 'Are there discounts for large projects?',
-                a: 'Yes, for long-term collaborations and large orders I offer a flexible discount system. Let\'s discuss the details personally.'
-            }, ];
 
             // ========== DOM REFS ==========
             const header = document.getElementById('header');
@@ -2329,9 +2741,9 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
                     div.className = 'masonry-item';
                     div.dataset.category = item.category;
                     div.innerHTML = `
-                        <img src="${item.img}" alt="${item.title}" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
-                        <span class="item-tag">${item.title}</span>
-                    `;
+                            <img src="${item.img}" alt="${item.title}" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
+                            <span class="item-tag">${item.title}</span>
+                        `;
                     div.addEventListener('click', () => {
                         const index = currentItems.findIndex(i => i.id === item.id);
                         openLightbox(index);
@@ -2371,7 +2783,6 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
             function updateLightbox() {
                 const item = currentItems[currentImageIndex];
                 if (!item) return;
-                // Use full resolution for lightbox
                 lightboxImg.src = item.full || item.img;
                 lightboxImg.alt = item.title;
                 lightboxTitle.textContent = item.title;
@@ -2413,66 +2824,6 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
                     showPrev(); }
                 if (e.key === 'Escape') closeLightbox();
             });
-
-            // ========== TESTIMONIALS ==========
-            let currentSlide = 0;
-
-            function renderTestimonials() {
-                testimonialTrack.innerHTML = '';
-                testimonialsData.forEach(t => {
-                    const slide = document.createElement('div');
-                    slide.className = 'testimonial-slide';
-                    slide.innerHTML = `
-                        <div class="testimonial-card">
-                            <div class="stars">★★★★★</div>
-                            <blockquote>“${t.text}”</blockquote>
-                            <div class="author">${t.author}</div>
-                            <div class="role">${t.role}</div>
-                        </div>
-                    `;
-                    testimonialTrack.appendChild(slide);
-                });
-                updateSlide();
-            }
-
-            function updateSlide() {
-                const total = testimonialsData.length;
-                if (currentSlide < 0) currentSlide = total - 1;
-                if (currentSlide >= total) currentSlide = 0;
-                testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }
-
-            prevSlide.addEventListener('click', () => { currentSlide--;
-                updateSlide(); });
-            nextSlide.addEventListener('click', () => { currentSlide++;
-                updateSlide(); });
-
-            renderTestimonials();
-
-            // ========== FAQ ==========
-            function renderFAQ() {
-                faqList.innerHTML = '';
-                faqData.forEach((item) => {
-                    const div = document.createElement('div');
-                    div.className = 'faq-item';
-                    div.innerHTML = `
-                        <button class="faq-question">
-                            ${item.q}
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="faq-answer">${item.a}</div>
-                    `;
-                    const btn = div.querySelector('.faq-question');
-                    btn.addEventListener('click', () => {
-                        const isOpen = div.classList.contains('open');
-                        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
-                        if (!isOpen) div.classList.add('open');
-                    });
-                    faqList.appendChild(div);
-                });
-                if (faqList.firstChild) faqList.firstChild.classList.add('open');
-            }
-            renderFAQ();
 
             // ========== CONTACT FORM ==========
             contactForm.addEventListener('submit', (e) => {
@@ -2612,102 +2963,725 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
         })();
     </script>
 
-<script>
-(function(){
-'use strict';
-const translations={
-ru:{
-metaTitle:'Alex Sokolov — Уличный фотограф',metaDescription:'Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография.',ogTitle:'Alex Sokolov — Уличный фотограф',ogDescription:'Уличная фотография, портреты и визуальные истории из городов мира.',
-nav:['Обо мне','Портфолио','Услуги','Процесс','Отзывы','FAQ','Контакты'],heroKicker:'Уличный фотограф',heroDesc:'Я ловлю ритм города через свет, движение и настоящие эмоции. Уже более семи лет я документирую улицы, людей и моменты, которые невозможно повторить.',viewPortfolio:'Смотреть портфолио',book:'Забронировать съёмку',years:'Лет',projects:'Проектов',clients:'Клиентов',location:'Европа • Работаю по всему миру',scroll:'Листайте',
-aboutLabel:'Обо мне',aboutTitle:'История за<br><span class="highlight">камерой</span>',aboutText:['Фотография для меня — это больше, чем красивые изображения. Это способ сохранить моменты, исчезающие за долю секунды.','Уже более семи лет я исследую города, культуры и повседневную жизнь в поисках настоящих эмоций, естественного света и историй, которые стоит запомнить.','Каждый кадр — это баланс композиции, атмосферы и эмоции. Моя цель — не просто документировать реальность, а заставить зрителя почувствовать себя внутри этого момента.'],skills:['Улица','Портрет','Путешествия','Архитектура','Документальная съёмка'],quote:'У каждой улицы есть история. Я просто жду правильного момента, чтобы её рассказать.',featured:'Избранное',trusted:'Мне доверяют<br><span class="highlight">во всём мире</span>',portfolio:'Портфолио',stories:'Истории <span class="highlight">улиц</span>',filters:['Все','Улица','Портрет','Детали'],services:'Услуги',servicesTitle:'Фотография<br><span class="highlight">для каждой истории.</span>',servicesDesc:'Каждая съёмка тщательно продумывается, чтобы создать естественные, выразительные и неподвластные времени фотографии.',process:'Как это работает',processTitle:'4 шага <span class="highlight">к кадру</span>',testimonials:'Отзывы',voices:'Голоса <span class="highlight">клиентов</span>',faq:'FAQ',faqTitle:'Часто <span class="highlight">спрашивают</span>',contact:'Контакты',contactTitle:'Давайте <span class="highlight">снимем</span>',contactHead:'Связаться со мной',contactDesc:'Пишите, звоните или приезжайте — я всегда открыт новым проектам и смелым идеям.',city:'Москва / Санкт-Петербург',name:'Имя',phone:'Телефон',email:'Email',service:'Услуга',select:'Выберите услугу',message:'Сообщение',messagePlaceholder:'Расскажите о вашей идее...',consent:'Я согласен на обработку персональных данных',send:'Отправить сообщение',done:'Готово!',doneDesc:'Я свяжусь с вами в течение 24 часов, чтобы обсудить съёмку.',close:'Закрыть',footerTag:'Уличный фотограф',footerDesc:'Истории через свет, эмоции и моменты, неподвластные времени.',
-servicesData:[['Уличный портрет','Идеально для личных портретов с настоящей городской атмосферой','от 25 000 ₽',['1,5 часа съёмки','40+ обработанных фото','Онлайн-галерея','Готовность за 5 дней']],['Истории города','Документальная фотография, которая ловит повседневную жизнь и настоящие эмоции','от 40 000 ₽',['3 часа съёмки','80+ обработанных фото','Онлайн-галерея','Готовность за 7 дней']],['Путешествие','Исследуем город вместе и создаём кинематографичные воспоминания в уникальных местах','от 60 000 ₽',['Полный съёмочный день','150+ обработанных фото','Онлайн-галерея','Готовность за 10 дней']]],
-steps:[['Идея','Обсуждаем концепцию, настроение и локацию съёмки.'],['Встреча и локация','Изучаем место и выбираем лучшие ракурсы и свет.'],['Съёмка','Работаем в потоке, ловим эмоции и свет. Без постановки.'],['Обработка и выдача','Я отбираю, обрабатываю и вовремя передаю финальные изображения.']],
-portfolio:[['Ритм города','Лондон, Великобритания'],['Уличный портрет','Берлин, Германия'],['Фактура стены','Париж, Франция'],['Туманное утро','Прага, Чехия'],['Прохожий','Токио, Япония'],['Переулок','Нью-Йорк, США'],['Окна','Амстердам, Нидерланды'],['Взгляд','Москва, Россия'],['Ночной проспект','Париж, Франция'],['Тени','Барселона, Испания'],['Музыкант','Новый Орлеан, США'],['Дождь в городе','Лондон, Великобритания']],
-testimonials:[['Алекс снимал моё выступление — это были лучшие концертные фотографии в моей жизни. Он на 100% чувствует ритм и эмоции.','Илья М.','Музыкант'],['Мы пригласили Алекса для новой коллекции одежды. Результат превзошёл ожидания: каждый кадр дышит атмосферой города.','Анна К.','Бренд-дизайнер'],['Алекс помог нам создать потрясающий контент для соцсетей. Кадры живые, настоящие и без постановки.','Максим Р.','Блогер, 500K+'],['Работа с Алексом всегда наполнена драйвом и свободой. Он не вмешивается — просто наблюдает и ловит магические моменты.','София Д.','Креативный продюсер']],faq:[['Как вы выбираете локацию для съёмки?','Я помогаю выбрать места, которые соответствуют вашей задумке — от тихих двориков до оживлённых проспектов. Главное, чтобы место резонировало с историей, которую мы хотим рассказать.'],['Сколько фотографий я получу?','В зависимости от формата — от 40 до 150+ фотографий. Все кадры проходят ручную цветокоррекцию и ретушь.'],['Можно ли изменить стиль обработки?','Конечно. Я работаю в разных стилях — от глубокого чёрно-белого до тёплой плёночной эстетики. Всё обсуждаем до съёмки.'],['Есть ли скидки на большие проекты?','Да. Для долгосрочного сотрудничества и крупных заказов действует гибкая система скидок. Обсудим детали лично.']]
-},
-en:{metaTitle:'Alex Sokolov — Street Photographer',metaDescription:'Alex Sokolov is a street photographer creating cinematic city stories, portraits and documentary images.',ogTitle:'Alex Sokolov — Street Photographer',ogDescription:'Street photography, portraits and visual stories from cities around the world.',nav:['About','Portfolio','Services','Process','Testimonials','FAQ','Contact'],heroKicker:'Street Photographer',heroDesc:'I capture the rhythm of the city through light, movement, and genuine emotions. For over seven years I have been documenting streets, people, and moments that can never be repeated.',viewPortfolio:'View Portfolio',book:'Book a Session',years:'Years',projects:'Projects',clients:'Clients',location:'Based in Europe • Available Worldwide',scroll:'Scroll',aboutLabel:'About',aboutTitle:'The Story Behind<br><span class="highlight">the Camera</span>',aboutText:['Photography, for me, is more than creating beautiful images. It is about preserving moments that disappear in a fraction of a second.','For over seven years I have explored cities, cultures and everyday life, searching for authentic emotions, natural light and stories that deserve to be remembered.','Every photograph is a balance between composition, atmosphere and emotion. My goal is not only to document reality, but to make people feel as if they were standing inside that very moment.'],skills:['Street','Portrait','Travel','Architecture','Documentary'],quote:'Every street has a story. I simply wait for the right moment to tell it.',featured:'Featured In',trusted:'Trusted by brands<br><span class="highlight">around the world</span>',portfolio:'Portfolio',stories:'Street <span class="highlight">Stories</span>',filters:['All','Street','Portrait','Detail'],services:'Services',servicesTitle:'Photography tailored<br><span class="highlight">to every story.</span>',servicesDesc:'Every session is carefully planned to create natural, timeless and expressive photographs.',process:'How It Works',processTitle:'4 Steps <span class="highlight">to a Frame</span>',testimonials:'Testimonials',voices:'Client <span class="highlight">Voices</span>',faq:'FAQ',faqTitle:'Frequently <span class="highlight">Asked</span>',contact:'Contact',contactTitle:"Let's <span class=\"highlight\">Shoot</span>",contactHead:'Get in Touch',contactDesc:"Write, call, or visit — I'm always open to new projects and bold ideas.",city:'Moscow / Saint Petersburg',name:'Name',phone:'Phone',email:'Email',service:'Service',select:'Select a service',message:'Message',messagePlaceholder:'Tell me about your idea...',consent:'I agree to the processing of personal data',send:'Send Message',done:'Done!',doneDesc:"I'll get back to you within 24 hours to discuss your shoot.",close:'Close',footerTag:'Street Photographer',footerDesc:'Capturing stories through light, emotion and timeless moments.',servicesData:[['Street Portrait','Perfect for personal portraits with an authentic urban atmosphere.','from €250',['1.5 hour session','40+ edited photos','Online gallery','Delivery within 5 days']],['City Stories','Documentary photography that captures everyday life and genuine emotions.','from €400',['3 hour session','80+ edited photos','Online gallery','Delivery within 7 days']],['Travel Session','Explore a city together and create cinematic memories in unique locations.','from €600',['Full day session','150+ edited photos','Online gallery','Delivery within 10 days']]],steps:[['Idea','We discuss the concept, mood, and location for the shoot.'],['Meet & Location','We visit the site, choosing the best angles and light.'],['Shoot','We work in flow, capturing emotions and light. No posing.'],['Edit & Deliver','I select, edit, and deliver the final images on time.']],portfolio:[['City Rhythm','London, UK'],['Street Portrait','Berlin, DE'],['Wall Texture','Paris, FR'],['Foggy Morning','Prague, CZ'],['Passerby','Tokyo, JP'],['Back Alley','NYC, US'],['Windows','Amsterdam, NL'],['The Gaze','Moscow, RU'],['Night Avenue','Paris, FR'],['Shadows','Barcelona, ES'],['Musician','New Orleans, US'],['Rain in the City','London, UK']],testimonials:[['Alex shot my performance — those were the best concert photos of my life. He feels rhythm and emotion 100%.','Ilya M.','Musician'],['We hired Alex for our new clothing collection. The result exceeded expectations: every photo breathes the city atmosphere.','Anna K.','Brand Designer'],['Alex helped us create amazing content for social media. The shots are alive, unstaged, authentic.','Maxim R.','Blogger, 500K+'],["Working with Alex is always full of drive and freedom. He doesn't interfere, just observes and captures magical moments.",'Sofia D.','Creative Producer']],faq:[['How do you choose a location for the shoot?','I help select locations that match your vision — from quiet courtyards to bustling avenues. The key is that the place resonates with the story we want to tell.'],['How many photos will I receive?','Depending on the format: from 40 to 150+ stunning images. All photos go through manual color correction and retouching.'],['Can I change the editing style?','Absolutely! I work in various styles — from deep black and white to warm film aesthetics. We discuss everything before the shoot.'],['Are there discounts for large projects?','Yes, for long-term collaborations and large orders I offer a flexible discount system. Let\'s discuss the details personally.']]}
-};
-const D=translations;
-const get=(sel)=>document.querySelector(sel); const all=(sel)=>[...document.querySelectorAll(sel)];
-function setText(el, value){if(!el)return;if(value.includes('<'))el.innerHTML=value;else el.textContent=value;}
-function setLanguage(lang){const t=D[lang]||D.ru;document.documentElement.lang=lang;localStorage.setItem('alex-language',lang);document.title=t.metaTitle;get('meta[name="description"]').setAttribute('content',t.metaDescription);get('meta[property="og:title"]').setAttribute('content',t.ogTitle);get('meta[property="og:description"]').setAttribute('content',t.ogDescription);get('#langToggle').textContent=lang==='ru'?'EN':'RU';
-all('.nav a').forEach((a,i)=>setText(a,t.nav[i]));setText(get('.hero-kicker'),t.heroKicker);setText(get('.hero-description'),t.heroDesc);setText(get('.btn-primary'),t.viewPortfolio);setText(get('.btn-secondary'),t.book);all('.hero-stat small').forEach((e,i)=>setText(e,[t.years,t.projects,t.clients][i]));setText(get('#heroLocation'),t.location);setText(get('.hero-scroll span'),t.scroll);
-setText(get('#about .section-label'),t.aboutLabel);setText(get('#about .section-title'),t.aboutTitle);all('#about .about-text').forEach((e,i)=>setText(e,t.aboutText[i]));all('.skills span').forEach((e,i)=>setText(e,t.skills[i]));setText(get('.about-quote'),t.quote);setText(get('#featured .section-label'),t.featured);setText(get('#featured .section-title'),t.trusted);setText(get('#portfolio .section-label'),t.portfolio);setText(get('#portfolio .section-title'),t.stories);all('.filter-btn').forEach((e,i)=>setText(e,t.filters[i]));setText(get('#services .section-label'),t.services);
-setText(get('#services .section-title'),t.servicesTitle);
-setText(get('#services .section-desc'),t.servicesDesc);
-all('.service-card').forEach((card, i) => {
-  const prices = lang === 'ru'
-    ? ['от 25 000 ₽', 'от 40 000 ₽', 'от 60 000 ₽']
-    : ['from €250', 'from €400', 'from €600'];
-  const priceEl = card.querySelector('.service-price');
-  if (priceEl) priceEl.textContent = prices[i];
-});
-setText(get('#process .section-label'),t.process);setText(get('#process .section-title'),t.processTitle);setText(get('#testimonials .section-label'),t.testimonials);setText(get('#testimonials .section-title'),t.voices);setText(get('#faq .section-label'),t.faq);setText(get('#faq .section-title'),t.faqTitle);setText(get('#contact .section-label'),t.contact);setText(get('#contact .section-title'),t.contactTitle);setText(get('.contact-info h3'),t.contactHead);setText(get('.contact-info p'),t.contactDesc);setText(get('.contact-info .detail:last-child'), '📍 '+t.city);all('#contactForm label').forEach((e,i)=>{const a=[t.name,t.phone,t.email,t.service,t.message,t.consent];if(a[i])setText(e,a[i])});get('#formName').placeholder=lang==='ru'?'Ваше имя':'Your name';get('#formEmail').placeholder=lang==='ru'?'you@example.com':'you@example.com';get('#formComment').placeholder=t.messagePlaceholder;setText(get('#formService option[value=""]'),t.select);setText(get('.submit-btn'),t.send);setText(get('.modal-box h3'),t.done);setText(get('.modal-box p'),t.doneDesc);setText(get('#closeModal'),t.close);setText(get('.footer .tagline'),t.footerTag);setText(get('.footer .description'),t.footerDesc);setText(get('.lightbox-close'), '✕');get('.lightbox-close').setAttribute('aria-label',lang==='ru'?'Закрыть фото':'Close photo');get('#lightboxPrev').setAttribute('aria-label',lang==='ru'?'Предыдущее фото':'Previous photo');get('#lightboxNext').setAttribute('aria-label',lang==='ru'?'Следующее фото':'Next photo');
-renderServices(t);renderSteps(t);renderPortfolio(t,document.querySelector('.filter-btn.active')?.dataset.filter||'all');renderTestimonials(t);renderFAQ(t);
-}
-function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
-function renderSteps(t){all('.timeline-item').forEach((el,i)=>{const d=t.steps[i];if(!d)return;setText(el.querySelector('h4'),d[0]);setText(el.querySelector('p'),d[1]);setText(el.querySelector('.step-num'),`${langCurrent==='ru'?'Шаг':'Step'} ${String(i+1).padStart(2,'0')}`)})}
-function renderPortfolio(t, filter){
-    // Unified portfolio render using global data
-    const data = window.__alexPortfolioData || [];
-    const grid = get('#masonryGrid');
-    if(!grid) return;
-    const items = filter === 'all' ? data : data.filter(x => x.category === filter || (filter === 'detail' && x.category === 'architecture'));
-    grid.innerHTML = '';
-    items.forEach((item, idx) => {
-        const globalIndex = data.findIndex(x => x.id === item.id);
-        const el = document.createElement('div');
-        el.className = 'masonry-item';
-        el.dataset.category = item.category;
-        const title = (t.portfolio && t.portfolio[globalIndex]) ? t.portfolio[globalIndex][0] : item.title;
-        el.innerHTML = `
-            <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover">
-            <span class="item-tag">${title}</span>
-        `;
-        el.addEventListener('click', () => {
-            window.__alexOpenLightbox && window.__alexOpenLightbox(globalIndex);
-        });
-        grid.appendChild(el);
-    });
-}
-function renderTestimonials(t){const track=get('#testimonialTrack');if(!track)return;track.innerHTML='';t.testimonials.forEach(x=>{const el=document.createElement('div');el.className='testimonial-slide';el.innerHTML=`<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>“${x[0]}”</blockquote><div class="author">${x[1]}</div><div class="role">${x[2]}</div></div>`;track.appendChild(el)})}
-function renderFAQ(t){const list=get('#faqList');if(!list)return;list.innerHTML='';t.faq.forEach((x,i)=>{const el=document.createElement('div');el.className='faq-item';el.innerHTML=`<button class="faq-question" aria-expanded="${i===0}">${x[0]}<span class="icon">+</span></button><div class="faq-answer">${x[1]}</div>`;const btn=el.querySelector('button');btn.addEventListener('click',()=>{const open=el.classList.contains('open');all('.faq-item').forEach(e=>{e.classList.remove('open');e.querySelector('button').setAttribute('aria-expanded','false')});if(!open){el.classList.add('open');btn.setAttribute('aria-expanded','true')}});list.appendChild(el)});list.firstElementChild?.classList.add('open')}
-let langCurrent=localStorage.getItem('alex-language')||'ru';
-const languageButton=get('#langToggle');languageButton?.addEventListener('click',()=>{langCurrent=langCurrent==='ru'?'en':'ru';setLanguage(langCurrent)});
-// ===== ЛАЙТБОКС: используем глобальные данные =====
-let lbIndex=0;let lbStartX=0;const lb=get('#lightbox');const lbImg=get('#lightboxImg');const lbTitle=get('#lightboxTitle');const lbDetails=get('#lightboxDetails');const lbCounter=get('#lightboxCounter');
-function openLB(i){lbIndex=i;updateLB();lb.classList.add('open');document.body.style.overflow='hidden';get('#lightboxClose')?.focus()}
-function updateLB(){const t=D[langCurrent],data=window.__alexPortfolioData||[];const item=data[lbIndex];if(!item)return;lbImg.src=item.full || item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${data.length}`}
-function moveLB(dir){const data=window.__alexPortfolioData||[];if(!data.length)return;lbIndex=(lbIndex+dir+data.length)%data.length;updateLB()}
-window.__alexOpenLightbox=openLB;get('#lightboxPrev')?.addEventListener('click',()=>moveLB(-1));get('#lightboxNext')?.addEventListener('click',()=>moveLB(1));get('#lightboxClose')?.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''});lb?.addEventListener('touchstart',e=>{lbStartX=e.changedTouches[0].clientX},{passive:true});lb?.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lbStartX;if(Math.abs(dx)>50)moveLB(dx<0?1:-1)},{passive:true});
-all('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{setTimeout(()=>renderPortfolio(D[langCurrent],btn.dataset.filter),0)}));document.addEventListener('keydown',e=>{if(!lb?.classList.contains('open'))return;if(e.key==='ArrowRight')moveLB(1);if(e.key==='ArrowLeft')moveLB(-1);if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}});
-// Count-up stats
-const countObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting||e.target.dataset.counted)return;e.target.dataset.counted='1';const raw=e.target.textContent.trim();const m=raw.match(/(\d+)/);if(!m)return;const target=+m[1],suffix=raw.replace(m[1],'');let n=0;const step=Math.max(1,Math.ceil(target/35));const tick=()=>{n=Math.min(target,n+step);e.target.textContent=n+suffix;if(n<target)requestAnimationFrame(tick)};tick()}),{threshold:.7});all('.number,.hero-stat span').forEach(e=>countObserver.observe(e));
-all('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%6,5)*.08}s`});
-// Preloader: НАДЁЖНОЕ СКРЫТИЕ
-const hidePreloader=()=>{
-    const preloader=document.getElementById('preloader');
-    if(!preloader)return;
-    preloader.classList.add('is-hidden');
-    setTimeout(()=>{
-        if(preloader.parentNode) preloader.style.display='none';
-    },900);
-};
-// Множественные триггеры для надёжности
-if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',()=>setTimeout(hidePreloader,350),{once:true});
-} else {
-    setTimeout(hidePreloader,350);
-}
-window.addEventListener('load',()=>{
-    // Дополнительная страховка: если прелоадер всё ещё виден через 2 секунды после load
-    setTimeout(hidePreloader,200);
-}, {once:true});
-// Экстренная страховка: максимум через 2.5 секунды убираем в любом случае
-setTimeout(hidePreloader,2500);
-setLanguage(langCurrent);
-})();
-</script>
+    <script>
+        (function() {
+            'use strict';
+
+            // ============================================================
+            //  TRANSLATIONS
+            // ============================================================
+            const translations = {
+                ru: {
+                    metaTitle: 'Alex Sokolov — Уличный фотограф',
+                    metaDescription: 'Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография.',
+                    ogTitle: 'Alex Sokolov — Уличный фотограф',
+                    ogDescription: 'Уличная фотография, портреты и визуальные истории из городов мира.',
+                    nav: ['Обо мне', 'Портфолио', 'Услуги', 'Процесс', 'Отзывы', 'FAQ', 'Контакты'],
+                    heroKicker: 'Уличный фотограф',
+                    heroDesc: 'Я ловлю ритм города через свет, движение и настоящие эмоции. Уже более семи лет я документирую улицы, людей и моменты, которые невозможно повторить.',
+                    viewPortfolio: 'Смотреть портфолио',
+                    book: 'Забронировать съёмку',
+                    years: 'Лет',
+                    projects: 'Проектов',
+                    clients: 'Клиентов',
+                    location: 'Европа • Работаю по всему миру ↓',
+                    scroll: 'Листайте',
+                    aboutLabel: 'Обо мне',
+                    aboutTitle: 'История за<br><span class="highlight">камерой</span>',
+                    aboutText: [
+                        'Фотография для меня — это больше, чем красивые изображения. Это способ сохранить моменты, исчезающие за долю секунды.',
+                        'Уже более семи лет я исследую города, культуры и повседневную жизнь в поисках настоящих эмоций, естественного света и историй, которые стоит запомнить.',
+                        'Каждый кадр — это баланс композиции, атмосферы и эмоции. Моя цель — не просто документировать реальность, а заставить зрителя почувствовать себя внутри этого момента.'
+                    ],
+                    skills: ['Улица', 'Портрет', 'Путешествия', 'Архитектура', 'Документальная съёмка'],
+                    quote: 'У каждой улицы есть история. Я просто жду правильного момента, чтобы её рассказать.',
+                    featured: 'Избранное',
+                    trusted: 'Мне доверяют<br><span class="highlight">во всём мире</span>',
+                    portfolio: 'Портфолио',
+                    stories: 'Истории <span class="highlight">улиц</span>',
+                    filters: ['Все', 'Улица', 'Портрет', 'Архитектура', 'Ночь', 'Ч/Б'],
+                    services: 'Услуги',
+                    servicesTitle: 'Фотография<br><span class="highlight">для каждой истории.</span>',
+                    servicesDesc: 'Каждая съёмка тщательно продумывается, чтобы создать естественные, выразительные и неподвластные времени фотографии.',
+                    process: 'Как это работает',
+                    processTitle: '4 шага <span class="highlight">к кадру</span>',
+                    testimonials: 'Отзывы',
+                    voices: 'Голоса <span class="highlight">клиентов</span>',
+                    faq: 'FAQ',
+                    faqTitle: 'Часто <span class="highlight">спрашивают</span>',
+                    contact: 'Контакты',
+                    contactTitle: 'Давайте <span class="highlight">снимем</span>',
+                    contactHead: 'Связаться со мной',
+                    contactDesc: 'Пишите, звоните или приезжайте — я всегда открыт новым проектам и смелым идеям.',
+                    city: 'Москва / Санкт-Петербург',
+                    name: 'Имя',
+                    phone: 'Телефон',
+                    email: 'Email',
+                    service: 'Услуга',
+                    select: 'Выберите услугу',
+                    message: 'Сообщение',
+                    messagePlaceholder: 'Расскажите о вашей идее...',
+                    consent: 'Я согласен на обработку персональных данных',
+                    send: 'Отправить сообщение',
+                    done: 'Готово!',
+                    doneDesc: 'Я свяжусь с вами в течение 24 часов, чтобы обсудить съёмку.',
+                    close: 'Закрыть',
+                    footerTag: 'Уличный фотограф',
+                    footerDesc: 'Истории через свет, эмоции и моменты, неподвластные времени.',
+                    servicesData: [
+                        ['Уличный портрет', 'Идеально для личных портретов с настоящей городской атмосферой', 'от 25 000 ₽', [
+                            '1,5 часа съёмки', '40+ обработанных фото', 'Онлайн-галерея', 'Готовность за 5 дней'
+                        ]],
+                        ['Истории города', 'Документальная фотография, которая ловит повседневную жизнь и настоящие эмоции',
+                            'от 40 000 ₽', ['3 часа съёмки', '80+ обработанных фото', 'Онлайн-галерея',
+                                'Готовность за 7 дней'
+                            ]],
+                        ['Путешествие', 'Исследуем город вместе и создаём кинематографичные воспоминания в уникальных местах',
+                            'от 60 000 ₽', ['Полный съёмочный день', '150+ обработанных фото', 'Онлайн-галерея',
+                                'Готовность за 10 дней'
+                            ]]
+                    ],
+                    steps: [
+                        ['Идея', 'Обсуждаем концепцию, настроение и локацию съёмки.'],
+                        ['Встреча и локация', 'Изучаем место и выбираем лучшие ракурсы и свет.'],
+                        ['Съёмка', 'Работаем в потоке, ловим эмоции и свет. Без постановки.'],
+                        ['Обработка и выдача', 'Я отбираю, обрабатываю и вовремя передаю финальные изображения.']
+                    ],
+                    portfolio: [
+                        ['Ритм города', 'Лондон, Великобритания'],
+                        ['Уличный портрет', 'Берлин, Германия'],
+                        ['Фактура стены', 'Париж, Франция'],
+                        ['Туманное утро', 'Прага, Чехия'],
+                        ['Прохожий', 'Токио, Япония'],
+                        ['Переулок', 'Нью-Йорк, США'],
+                        ['Окна', 'Амстердам, Нидерланды'],
+                        ['Взгляд', 'Москва, Россия'],
+                        ['Ночной проспект', 'Париж, Франция'],
+                        ['Тени', 'Барселона, Испания'],
+                        ['Музыкант', 'Новый Орлеан, США'],
+                        ['Дождь в городе', 'Лондон, Великобритания']
+                    ],
+                    testimonials: [
+                        ['Алекс снимал моё выступление — это были лучшие концертные фотографии в моей жизни. Он на 100% чувствует ритм и эмоции.',
+                            'Илья М.', 'Музыкант'],
+                        ['Мы пригласили Алекса для новой коллекции одежды. Результат превзошёл ожидания: каждый кадр дышит атмосферой города.',
+                            'Анна К.', 'Бренд-дизайнер'],
+                        ['Алекс помог нам создать потрясающий контент для соцсетей. Кадры живые, настоящие и без постановки.',
+                            'Максим Р.', 'Блогер, 500K+'],
+                        ['Работа с Алексом всегда наполнена драйвом и свободой. Он не вмешивается — просто наблюдает и ловит магические моменты.',
+                            'София Д.', 'Креативный продюсер']
+                    ],
+                    faq: [
+                        ['Как вы выбираете локацию для съёмки?',
+                            'Я помогаю выбрать места, которые соответствуют вашей задумке — от тихих двориков до оживлённых проспектов. Главное, чтобы место резонировало с историей, которую мы хотим рассказать.'
+                        ],
+                        ['Сколько фотографий я получу?',
+                            'В зависимости от формата — от 40 до 150+ фотографий. Все кадры проходят ручную цветокоррекцию и ретушь.'
+                        ],
+                        ['Можно ли изменить стиль обработки?',
+                            'Конечно. Я работаю в разных стилях — от глубокого чёрно-белого до тёплой плёночной эстетики. Всё обсуждаем до съёмки.'
+                        ],
+                        ['Есть ли скидки на большие проекты?',
+                            'Да. Для долгосрочного сотрудничества и крупных заказов действует гибкая система скидок. Обсудим детали лично.'
+                        ]
+                    ]
+                },
+                en: {
+                    metaTitle: 'Alex Sokolov — Street Photographer',
+                    metaDescription: 'Alex Sokolov is a street photographer creating cinematic city stories, portraits and documentary images.',
+                    ogTitle: 'Alex Sokolov — Street Photographer',
+                    ogDescription: 'Street photography, portraits and visual stories from cities around the world.',
+                    nav: ['About', 'Portfolio', 'Services', 'Process', 'Testimonials', 'FAQ', 'Contact'],
+                    heroKicker: 'Street Photographer',
+                    heroDesc: 'I capture the rhythm of the city through light, movement, and genuine emotions. For over seven years I have been documenting streets, people, and moments that can never be repeated.',
+                    viewPortfolio: 'View Portfolio',
+                    book: 'Book a Session',
+                    years: 'Years',
+                    projects: 'Projects',
+                    clients: 'Clients',
+                    location: 'Based in Europe • Available Worldwide ↓',
+                    scroll: 'Scroll',
+                    aboutLabel: 'About',
+                    aboutTitle: 'The Story Behind<br><span class="highlight">the Camera</span>',
+                    aboutText: [
+                        'Photography, for me, is more than creating beautiful images. It is about preserving moments that disappear in a fraction of a second.',
+                        'For over seven years I have explored cities, cultures and everyday life, searching for authentic emotions, natural light and stories that deserve to be remembered.',
+                        'Every photograph is a balance between composition, atmosphere and emotion. My goal is not only to document reality, but to make people feel as if they were standing inside that very moment.'
+                    ],
+                    skills: ['Street', 'Portrait', 'Travel', 'Architecture', 'Documentary'],
+                    quote: 'Every street has a story. I simply wait for the right moment to tell it.',
+                    featured: 'Featured In',
+                    trusted: 'Trusted by brands<br><span class="highlight">around the world</span>',
+                    portfolio: 'Portfolio',
+                    stories: 'Street <span class="highlight">Stories</span>',
+                    filters: ['All', 'Street', 'Portrait', 'Architecture', 'Night', 'B&W'],
+                    services: 'Services',
+                    servicesTitle: 'Photography tailored<br><span class="highlight">to every story.</span>',
+                    servicesDesc: 'Every session is carefully planned to create natural, timeless and expressive photographs.',
+                    process: 'How It Works',
+                    processTitle: '4 Steps <span class="highlight">to a Frame</span>',
+                    testimonials: 'Testimonials',
+                    voices: 'Client <span class="highlight">Voices</span>',
+                    faq: 'FAQ',
+                    faqTitle: 'Frequently <span class="highlight">Asked</span>',
+                    contact: 'Contact',
+                    contactTitle: 'Let\'s <span class="highlight">Shoot</span>',
+                    contactHead: 'Get in Touch',
+                    contactDesc: 'Write, call, or visit — I\'m always open to new projects and bold ideas.',
+                    city: 'Moscow / Saint Petersburg',
+                    name: 'Name',
+                    phone: 'Phone',
+                    email: 'Email',
+                    service: 'Service',
+                    select: 'Select a service',
+                    message: 'Message',
+                    messagePlaceholder: 'Tell me about your idea...',
+                    consent: 'I agree to the processing of personal data',
+                    send: 'Send Message',
+                    done: 'Done!',
+                    doneDesc: 'I\'ll get back to you within 24 hours to discuss your shoot.',
+                    close: 'Close',
+                    footerTag: 'Street Photographer',
+                    footerDesc: 'Capturing stories through light, emotion and timeless moments.',
+                    servicesData: [
+                        ['Street Portrait',
+                            'Perfect for personal portraits with an authentic urban atmosphere.', 'from €250', [
+                                '1.5 hour session', '40+ edited photos', 'Online gallery', 'Delivery within 5 days'
+                            ]],
+                        ['City Stories',
+                            'Documentary photography that captures everyday life and genuine emotions.',
+                            'from €400', ['3 hour session', '80+ edited photos', 'Online gallery',
+                                'Delivery within 7 days'
+                            ]],
+                        ['Travel Session',
+                            'Explore a city together and create cinematic memories in unique locations.',
+                            'from €600', ['Full day session', '150+ edited photos', 'Online gallery',
+                                'Delivery within 10 days'
+                            ]]
+                    ],
+                    steps: [
+                        ['Idea', 'We discuss the concept, mood, and location for the shoot.'],
+                        ['Meet & Location', 'We visit the site, choosing the best angles and light.'],
+                        ['Shoot', 'We work in flow, capturing emotions and light. No posing.'],
+                        ['Edit & Deliver', 'I select, edit, and deliver the final images on time.']
+                    ],
+                    portfolio: [
+                        ['City Rhythm', 'London, UK'],
+                        ['Street Portrait', 'Berlin, DE'],
+                        ['Wall Texture', 'Paris, FR'],
+                        ['Foggy Morning', 'Prague, CZ'],
+                        ['Passerby', 'Tokyo, JP'],
+                        ['Back Alley', 'NYC, US'],
+                        ['Windows', 'Amsterdam, NL'],
+                        ['The Gaze', 'Moscow, RU'],
+                        ['Night Avenue', 'Paris, FR'],
+                        ['Shadows', 'Barcelona, ES'],
+                        ['Musician', 'New Orleans, US'],
+                        ['Rain in the City', 'London, UK']
+                    ],
+                    testimonials: [
+                        ['Alex shot my performance — those were the best concert photos of my life. He feels rhythm and emotion 100%.',
+                            'Ilya M.', 'Musician'],
+                        ['We hired Alex for our new clothing collection. The result exceeded expectations: every photo breathes the city atmosphere.',
+                            'Anna K.', 'Brand Designer'],
+                        ['Alex helped us create amazing content for social media. The shots are alive, unstaged, authentic.',
+                            'Maxim R.', 'Blogger, 500K+'],
+                        ['Working with Alex is always full of drive and freedom. He doesn\'t interfere, just observes and captures magical moments.',
+                            'Sofia D.', 'Creative Producer']
+                    ],
+                    faq: [
+                        ['How do you choose a location for the shoot?',
+                            'I help select locations that match your vision — from quiet courtyards to bustling avenues. The key is that the place resonates with the story we want to tell.'
+                        ],
+                        ['How many photos will I receive?',
+                            'Depending on the format: from 40 to 150+ stunning images. All photos go through manual color correction and retouching.'
+                        ],
+                        ['Can I change the editing style?',
+                            'Absolutely! I work in various styles — from deep black and white to warm film aesthetics. We discuss everything before the shoot.'
+                        ],
+                        ['Are there discounts for large projects?',
+                            'Yes, for long-term collaborations and large orders I offer a flexible discount system. Let\'s discuss the details personally.'
+                        ]
+                    ]
+                }
+            };
+
+            const D = translations;
+            const get = (sel) => document.querySelector(sel);
+            const all = (sel) => [...document.querySelectorAll(sel)];
+
+            function setText(el, value) {
+                if (!el) return;
+                if (typeof value === 'string' && value.includes('<')) {
+                    el.innerHTML = value;
+                } else {
+                    el.textContent = value;
+                }
+            }
+
+            // ============================================================
+            //  RENDER FUNCTIONS
+            // ============================================================
+            function renderServices(t) {
+                const cards = all('.service-card');
+                cards.forEach((card, i) => {
+                    const d = t.servicesData[i];
+                    if (!d) return;
+                    setText(card.querySelector('h3'), d[0]);
+                    setText(card.querySelector('.service-desc'), d[1]);
+                    setText(card.querySelector('.service-price'), d[2]);
+                    const features = card.querySelectorAll('li');
+                    features.forEach((li, j) => {
+                        if (d[3] && d[3][j]) setText(li, d[3][j]);
+                    });
+                    setText(card.querySelector('.service-link'), t.book + ' →');
+                });
+            }
+
+            function renderSteps(t) {
+                const items = all('.timeline-item');
+                items.forEach((el, i) => {
+                    const d = t.steps[i];
+                    if (!d) return;
+                    setText(el.querySelector('h4'), d[0]);
+                    setText(el.querySelector('p'), d[1]);
+                    const prefix = t === D.ru ? 'Шаг' : 'Step';
+                    setText(el.querySelector('.step-num'), `${prefix} ${String(i + 1).padStart(2, '0')}`);
+                });
+            }
+
+            function renderPortfolio(t, filter) {
+                const data = window.__alexPortfolioData || [];
+                const grid = get('#masonryGrid');
+                if (!grid) return;
+                const items = filter === 'all' ? data : data.filter(x => x.category === filter);
+                grid.innerHTML = '';
+                items.forEach((item, idx) => {
+                    const globalIndex = data.findIndex(x => x.id === item.id);
+                    const el = document.createElement('div');
+                    el.className = 'masonry-item';
+                    el.dataset.category = item.category;
+                    let title = item.title;
+                    let details = item.details || '—';
+                    if (t.portfolio && t.portfolio[globalIndex]) {
+                        title = t.portfolio[globalIndex][0] || item.title;
+                        details = t.portfolio[globalIndex][1] || item.details || '—';
+                    }
+                    el.innerHTML = `
+                            <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover">
+                            <span class="item-tag">${title}</span>
+                        `;
+                    el.addEventListener('click', () => {
+                        // find index in current filtered list
+                        const filteredItems = filter === 'all' ? data : data.filter(x => x.category === filter);
+                        const idxInFiltered = filteredItems.findIndex(x => x.id === item.id);
+                        if (idxInFiltered !== -1) {
+                            window.__alexOpenLightbox && window.__alexOpenLightbox(idxInFiltered);
+                        }
+                    });
+                    grid.appendChild(el);
+                });
+                // Re-run image load detection
+                grid.querySelectorAll('img').forEach(img => {
+                    if (img.complete) img.classList.add('loaded');
+                    else img.addEventListener('load', () => img.classList.add('loaded'));
+                });
+            }
+
+            function renderTestimonials(t) {
+                const track = get('#testimonialTrack');
+                if (!track) return;
+                track.innerHTML = '';
+                t.testimonials.forEach((x) => {
+                    const el = document.createElement('div');
+                    el.className = 'testimonial-slide';
+                    el.innerHTML = `
+                            <div class="testimonial-card">
+                                <div class="stars">★★★★★</div>
+                                <blockquote>“${x[0]}”</blockquote>
+                                <div class="author">${x[1]}</div>
+                                <div class="role">${x[2]}</div>
+                            </div>
+                        `;
+                    track.appendChild(el);
+                });
+                // Reset slider position
+                if (window.__testimonialCurrent !== undefined) {
+                    window.__testimonialCurrent = 0;
+                    track.style.transform = 'translateX(0)';
+                }
+            }
+
+            function renderFAQ(t) {
+                const list = get('#faqList');
+                if (!list) return;
+                list.innerHTML = '';
+                t.faq.forEach((x, i) => {
+                    const el = document.createElement('div');
+                    el.className = 'faq-item' + (i === 0 ? ' open' : '');
+                    el.innerHTML = `
+                            <button class="faq-question" aria-expanded="${i === 0}">
+                                ${x[0]}
+                                <span class="icon">+</span>
+                            </button>
+                            <div class="faq-answer">${x[1]}</div>
+                        `;
+                    const btn = el.querySelector('button');
+                    btn.addEventListener('click', () => {
+                        const open = el.classList.contains('open');
+                        all('.faq-item').forEach(e => {
+                            e.classList.remove('open');
+                            e.querySelector('button').setAttribute('aria-expanded', 'false');
+                        });
+                        if (!open) {
+                            el.classList.add('open');
+                            btn.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                    list.appendChild(el);
+                });
+            }
+
+            // ============================================================
+            //  MAIN SET LANGUAGE
+            // ============================================================
+            let langCurrent = localStorage.getItem('alex-language') || 'ru';
+
+            function setLanguage(lang) {
+                const t = D[lang] || D.ru;
+                langCurrent = lang;
+                localStorage.setItem('alex-language', lang);
+                document.documentElement.lang = lang;
+
+                // Meta
+                document.title = t.metaTitle;
+                get('meta[name="description"]').setAttribute('content', t.metaDescription);
+                get('meta[property="og:title"]').setAttribute('content', t.ogTitle);
+                get('meta[property="og:description"]').setAttribute('content', t.ogDescription);
+
+                // Lang toggle button
+                get('#langToggle').textContent = lang === 'ru' ? 'EN' : 'RU';
+
+                // Nav
+                all('.nav a').forEach((a, i) => {
+                    if (t.nav[i]) setText(a, t.nav[i]);
+                });
+
+                // Hero
+                setText(get('.hero-kicker'), t.heroKicker);
+                setText(get('.hero-description'), t.heroDesc);
+                setText(get('.btn-primary'), t.viewPortfolio);
+                setText(get('.btn-secondary'), t.book);
+                const statLabels = all('.hero-stat small');
+                if (statLabels.length >= 3) {
+                    setText(statLabels[0], t.years);
+                    setText(statLabels[1], t.projects);
+                    setText(statLabels[2], t.clients);
+                }
+                setText(get('#heroLocation'), t.location);
+                setText(get('.hero-scroll span'), t.scroll);
+
+                // About
+                setText(get('#about .section-label'), t.aboutLabel);
+                setText(get('#about .section-title'), t.aboutTitle);
+                const aboutTexts = all('#about .about-text');
+                aboutTexts.forEach((el, i) => {
+                    if (t.aboutText[i]) setText(el, t.aboutText[i]);
+                });
+                const skillSpans = all('.skills span');
+                skillSpans.forEach((el, i) => {
+                    if (t.skills[i]) setText(el, t.skills[i]);
+                });
+                setText(get('.about-quote'), t.quote);
+
+                // Featured
+                setText(get('#featured .section-label'), t.featured);
+                setText(get('#featured .section-title'), t.trusted);
+
+                // Portfolio
+                setText(get('#portfolio .section-label'), t.portfolio);
+                setText(get('#portfolio .section-title'), t.stories);
+                const filterBtns = all('.filter-btn');
+                filterBtns.forEach((btn, i) => {
+                    if (t.filters[i]) setText(btn, t.filters[i]);
+                });
+
+                // Services
+                setText(get('#services .section-label'), t.services);
+                setText(get('#services .section-title'), t.servicesTitle);
+                setText(get('#services .section-desc'), t.servicesDesc);
+
+                // Process
+                setText(get('#process .section-label'), t.process);
+                setText(get('#process .section-title'), t.processTitle);
+
+                // Testimonials
+                setText(get('#testimonials .section-label'), t.testimonials);
+                setText(get('#testimonials .section-title'), t.voices);
+
+                // FAQ
+                setText(get('#faq .section-label'), t.faq);
+                setText(get('#faq .section-title'), t.faqTitle);
+
+                // Contact
+                setText(get('#contact .section-label'), t.contact);
+                setText(get('#contact .section-title'), t.contactTitle);
+                setText(get('.contact-info h3'), t.contactHead);
+                setText(get('.contact-info p'), t.contactDesc);
+                const cityDetail = all('.contact-info .detail')[2];
+                if (cityDetail) {
+                    const iconSpan = cityDetail.querySelector('.icon');
+                    if (iconSpan) setText(cityDetail, '📍 ' + t.city);
+                }
+
+                // Contact form labels
+                const formLabels = all('#contactForm label');
+                const labelMap = [t.name, t.phone, t.email, t.service, t.message, t.consent];
+                formLabels.forEach((el, i) => {
+                    if (labelMap[i]) setText(el, labelMap[i]);
+                });
+                get('#formName').placeholder = lang === 'ru' ? 'Ваше имя' : 'Your name';
+                get('#formPhone').placeholder = lang === 'ru' ? '+7 999 123-45-67' : '+7 999 123-45-67';
+                get('#formEmail').placeholder = lang === 'ru' ? 'you@example.com' : 'you@example.com';
+                get('#formComment').placeholder = t.messagePlaceholder;
+                const selectOpt = get('#formService option[value=""]');
+                if (selectOpt) setText(selectOpt, t.select);
+                setText(get('.submit-btn'), t.send);
+
+                // Success modal
+                setText(get('.modal-box h3'), t.done);
+                setText(get('.modal-box p'), t.doneDesc);
+                setText(get('#closeModal'), t.close);
+
+                // Footer
+                setText(get('.footer .tagline'), t.footerTag);
+                setText(get('.footer .description'), t.footerDesc);
+
+                // Lightbox accessibility
+                get('.lightbox-close').setAttribute('aria-label', lang === 'ru' ? 'Закрыть фото' : 'Close photo');
+                get('#lightboxPrev').setAttribute('aria-label', lang === 'ru' ? 'Предыдущее фото' : 'Previous photo');
+                get('#lightboxNext').setAttribute('aria-label', lang === 'ru' ? 'Следующее фото' : 'Next photo');
+
+                // ===== RENDER DYNAMIC SECTIONS =====
+                renderServices(t);
+                renderSteps(t);
+                // Re-render portfolio with current filter
+                const activeFilter = get('.filter-btn.active');
+                const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+                renderPortfolio(t, filter);
+                renderTestimonials(t);
+                renderFAQ(t);
+            }
+
+            // ============================================================
+            //  LIGHTBOX (совместимость с глобальным API)
+            // ============================================================
+            let lbIndex = 0;
+            const lb = get('#lightbox');
+            const lbImg = get('#lightboxImg');
+            const lbTitle = get('#lightboxTitle');
+            const lbDetails = get('#lightboxDetails');
+            const lbCounter = get('#lightboxCounter');
+
+            function getCurrentFilteredItems() {
+                const data = window.__alexPortfolioData || [];
+                const activeFilter = get('.filter-btn.active');
+                const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+                return filter === 'all' ? data : data.filter(x => x.category === filter);
+            }
+
+            function openLB(i) {
+                const items = getCurrentFilteredItems();
+                if (!items.length) return;
+                lbIndex = Math.min(Math.max(0, i), items.length - 1);
+                updateLB();
+                lb.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                get('#lightboxClose')?.focus();
+            }
+
+            function updateLB() {
+                const items = getCurrentFilteredItems();
+                if (!items.length) return;
+                const item = items[lbIndex];
+                if (!item) return;
+                const data = window.__alexPortfolioData || [];
+                const globalIndex = data.findIndex(x => x.id === item.id);
+                const t = D[langCurrent];
+                let title = item.title;
+                let details = item.details || '—';
+                if (t.portfolio && t.portfolio[globalIndex]) {
+                    title = t.portfolio[globalIndex][0] || item.title;
+                    details = t.portfolio[globalIndex][1] || item.details || '—';
+                }
+                lbImg.src = item.full || item.img;
+                lbImg.alt = title;
+                lbTitle.textContent = title;
+                lbDetails.textContent = details;
+                lbCounter.textContent = `${lbIndex + 1} / ${items.length}`;
+            }
+
+            function moveLB(dir) {
+                const items = getCurrentFilteredItems();
+                if (!items.length) return;
+                lbIndex = (lbIndex + dir + items.length) % items.length;
+                updateLB();
+            }
+
+            // Глобальный API для открытия lightbox из карточек
+            window.__alexOpenLightbox = openLB;
+
+            // Lightbox controls
+            get('#lightboxPrev')?.addEventListener('click', () => moveLB(-1));
+            get('#lightboxNext')?.addEventListener('click', () => moveLB(1));
+            get('#lightboxClose')?.addEventListener('click', () => {
+                lb.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            lb?.addEventListener('click', (e) => {
+                if (e.target === lb) {
+                    lb.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (!lb?.classList.contains('open')) return;
+                if (e.key === 'ArrowRight') { e.preventDefault();
+                    moveLB(1); }
+                if (e.key === 'ArrowLeft') { e.preventDefault();
+                    moveLB(-1); }
+                if (e.key === 'Escape') {
+                    lb.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // ============================================================
+            //  TESTIMONIAL SLIDER (синхронизация с переводами)
+            // ============================================================
+            let testiCurrent = 0;
+
+            function updateTestiSlide() {
+                const track = get('#testimonialTrack');
+                if (!track) return;
+                const total = track.children.length;
+                if (total === 0) return;
+                if (testiCurrent < 0) testiCurrent = total - 1;
+                if (testiCurrent >= total) testiCurrent = 0;
+                track.style.transform = `translateX(-${testiCurrent * 100}%)`;
+            }
+
+            get('#prevSlide')?.addEventListener('click', () => { testiCurrent--;
+                updateTestiSlide(); });
+            get('#nextSlide')?.addEventListener('click', () => { testiCurrent++;
+                updateTestiSlide(); });
+            // Store current for reset after re-render
+            Object.defineProperty(window, '__testimonialCurrent', {
+                get: () => testiCurrent,
+                set: (v) => { testiCurrent = v; }
+            });
+
+            // Patch renderTestimonials to keep slider position
+            const origRenderTestimonials = renderTestimonials;
+            renderTestimonials = function(t) {
+                origRenderTestimonials(t);
+                // Reset slider to first slide after re-render
+                testiCurrent = 0;
+                updateTestiSlide();
+            };
+
+            // ============================================================
+            //  FILTER BUTTONS — re-render portfolio with translations
+            // ============================================================
+            all('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    all('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const t = D[langCurrent];
+                    renderPortfolio(t, this.dataset.filter);
+                });
+            });
+
+            // ============================================================
+            //  LANGUAGE TOGGLE
+            // ============================================================
+            get('#langToggle')?.addEventListener('click', () => {
+                const next = langCurrent === 'ru' ? 'en' : 'ru';
+                setLanguage(next);
+            });
+
+            // ============================================================
+            //  COUNTER ANIMATION
+            // ============================================================
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting || e.target.dataset.counted) return;
+                    e.target.dataset.counted = '1';
+                    const raw = e.target.textContent.trim();
+                    const m = raw.match(/(\d+)/);
+                    if (!m) return;
+                    const target = +m[1];
+                    const suffix = raw.replace(m[1], '');
+                    let n = 0;
+                    const step = Math.max(1, Math.ceil(target / 35));
+                    const tick = () => {
+                        n = Math.min(target, n + step);
+                        e.target.textContent = n + suffix;
+                        if (n < target) requestAnimationFrame(tick);
+                    };
+                    tick();
+                });
+            }, { threshold: .7 });
+            all('.number, .hero-stat span').forEach(el => countObserver.observe(el));
+
+            // ============================================================
+            //  PRELOADER
+            // ============================================================
+            function hidePreloader() {
+                const preloader = document.getElementById('preloader');
+                if (!preloader) return;
+                preloader.classList.add('is-hidden');
+                setTimeout(() => {
+                    if (preloader.parentNode) preloader.style.display = 'none';
+                }, 900);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 350), { once: true });
+            } else {
+                setTimeout(hidePreloader, 350);
+            }
+            window.addEventListener('load', () => setTimeout(hidePreloader, 200), { once: true });
+            setTimeout(hidePreloader, 2500);
+
+            // ============================================================
+            //  INIT
+            // ============================================================
+            setLanguage(langCurrent);
+
+            // Re-run after a tiny delay to ensure DOM is fully ready
+            setTimeout(() => {
+                // Ensure portfolio is rendered with correct language
+                const activeFilter = get('.filter-btn.active');
+                const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+                const t = D[langCurrent];
+                renderPortfolio(t, filter);
+                renderTestimonials(t);
+                renderFAQ(t);
+                // Re-apply reveal animations
+                all('.reveal').forEach((el, i) => {
+                    el.style.transitionDelay = `${Math.min(i % 6, 5) * 0.08}s`;
+                });
+                // Update lightbox if open
+                if (lb?.classList.contains('open')) {
+                    updateLB();
+                }
+            }, 100);
+
+            console.log('🌍 Language system initialized. Current:', langCurrent);
+
+        })();
+    </script>
 
 </body>
 </html>
