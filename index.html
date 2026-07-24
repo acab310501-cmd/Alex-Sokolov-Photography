@@ -10,6 +10,7 @@
     <meta property="og:description" content="Уличная фотография, портреты и визуальные истории из городов мира." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -2137,6 +2138,7 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
             'use strict';
 
             // ========== DATA ==========
+            // Используем реальные изображения из папки images/
             const portfolioData = [
                 { id: 1, category: 'street', img: 'images/street_1_thumb.webp', full: 'images/street_1.webp', title: 'City Rhythm', details: 'Moscow, Russia' },
                 { id: 2, category: 'portrait', img: 'images/portrait_1_thumb.webp', full: 'images/portrait_1.webp', title: 'The Gaze', details: 'Europe' },
@@ -2151,6 +2153,9 @@ section{padding:150px 0}.section-label{color:var(--accent);letter-spacing:7px;op
                 { id: 11, category: 'street', img: 'images/street_7_thumb.webp', full: 'images/street_7.webp', title: 'Purple Hour', details: 'Europe' },
                 { id: 12, category: 'architecture', img: 'images/architecture_4_thumb.webp', full: 'images/architecture_4.webp', title: 'City Horizon', details: 'Europe' }
             ];
+
+            // ===== ГЛАВНОЕ: делаем данные доступными глобально =====
+            window.__alexPortfolioData = portfolioData;
 
             const testimonialsData = [{
                 text: 'Alex shot my performance — those were the best concert photos of my life. He feels rhythm and emotion 100%.',
@@ -2603,40 +2608,66 @@ all('.nav a').forEach((a,i)=>setText(a,t.nav[i]));setText(get('.hero-kicker'),t.
 setText(get('#about .section-label'),t.aboutLabel);setText(get('#about .section-title'),t.aboutTitle);all('#about .about-text').forEach((e,i)=>setText(e,t.aboutText[i]));all('.skills span').forEach((e,i)=>setText(e,t.skills[i]));setText(get('.about-quote'),t.quote);setText(get('#featured .section-label'),t.featured);setText(get('#featured .section-title'),t.trusted);setText(get('#portfolio .section-label'),t.portfolio);setText(get('#portfolio .section-title'),t.stories);all('.filter-btn').forEach((e,i)=>setText(e,t.filters[i]));setText(get('#services .section-label'),t.services);setText(get('#services .section-title'),t.servicesTitle);setText(get('#services .section-desc'),t.servicesDesc);setText(get('#process .section-label'),t.process);setText(get('#process .section-title'),t.processTitle);setText(get('#testimonials .section-label'),t.testimonials);setText(get('#testimonials .section-title'),t.voices);setText(get('#faq .section-label'),t.faq);setText(get('#faq .section-title'),t.faqTitle);setText(get('#contact .section-label'),t.contact);setText(get('#contact .section-title'),t.contactTitle);setText(get('.contact-info h3'),t.contactHead);setText(get('.contact-info p'),t.contactDesc);setText(get('.contact-info .detail:last-child'), '📍 '+t.city);all('#contactForm label').forEach((e,i)=>{const a=[t.name,t.phone,t.email,t.service,t.message,t.consent];if(a[i])setText(e,a[i])});get('#formName').placeholder=lang==='ru'?'Ваше имя':'Your name';get('#formEmail').placeholder=lang==='ru'?'you@example.com':'you@example.com';get('#formComment').placeholder=t.messagePlaceholder;setText(get('#formService option[value=""]'),t.select);setText(get('.submit-btn'),t.send);setText(get('.modal-box h3'),t.done);setText(get('.modal-box p'),t.doneDesc);setText(get('#closeModal'),t.close);setText(get('.footer .tagline'),t.footerTag);setText(get('.footer .description'),t.footerDesc);setText(get('.lightbox-close'), '✕');get('.lightbox-close').setAttribute('aria-label',lang==='ru'?'Закрыть фото':'Close photo');get('#lightboxPrev').setAttribute('aria-label',lang==='ru'?'Предыдущее фото':'Previous photo');get('#lightboxNext').setAttribute('aria-label',lang==='ru'?'Следующее фото':'Next photo');
 renderServices(t);renderSteps(t);renderPortfolio(t,document.querySelector('.filter-btn.active')?.dataset.filter||'all');renderTestimonials(t);renderFAQ(t);
 }
-function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);all('.service-features',card).forEach(()=>{});card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
+function renderServices(t){all('.service-card').forEach((card,i)=>{const d=t.servicesData[i];if(!d)return;setText(card.querySelector('h3'),d[0]);setText(card.querySelector('.service-desc'),d[1]);setText(card.querySelector('.service-price'),d[2]);card.querySelectorAll('li').forEach((li,j)=>setText(li,d[3][j]));setText(card.querySelector('.service-link'),t.book+' →')})}
 function renderSteps(t){all('.timeline-item').forEach((el,i)=>{const d=t.steps[i];if(!d)return;setText(el.querySelector('h4'),d[0]);setText(el.querySelector('p'),d[1]);setText(el.querySelector('.step-num'),`${langCurrent==='ru'?'Шаг':'Step'} ${String(i+1).padStart(2,'0')}`)})}
-function renderPortfolio(t,filter){const data=window.__alexPortfolioData||[];const grid=get('#masonryGrid');if(!grid)return;const items=filter==='all'?data:data.filter(x=>x.category===filter);grid.innerHTML='';items.forEach((item)=>{const i=data.findIndex(x=>x.id===item.id);const el=document.createElement('div');el.className='masonry-item';el.dataset.category=item.category;el.innerHTML=`<img src="${item.img}" alt="${t.portfolio[i]?.[0]||item.title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover"><span class="item-tag">${t.portfolio[i]?.[0]||item.title}</span>`;el.addEventListener('click',()=>{window.__alexOpenLightbox?.(i)});grid.appendChild(el)});}
+function renderPortfolio(t, filter){
+    // ===== ИСПРАВЛЕНО: используем глобальные данные =====
+    const data = window.__alexPortfolioData || [];
+    const grid = get('#masonryGrid');
+    if(!grid) return;
+    const items = filter === 'all' ? data : data.filter(x => x.category === filter);
+    grid.innerHTML = '';
+    items.forEach((item) => {
+        const i = data.findIndex(x => x.id === item.id);
+        const el = document.createElement('div');
+        el.className = 'masonry-item';
+        el.dataset.category = item.category;
+        const title = (t.portfolio && t.portfolio[i]) ? t.portfolio[i][0] : item.title;
+        el.innerHTML = `
+            <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover">
+            <span class="item-tag">${title}</span>
+        `;
+        el.addEventListener('click', () => {
+            window.__alexOpenLightbox && window.__alexOpenLightbox(i);
+        });
+        grid.appendChild(el);
+    });
+}
 function renderTestimonials(t){const track=get('#testimonialTrack');if(!track)return;track.innerHTML='';t.testimonials.forEach(x=>{const el=document.createElement('div');el.className='testimonial-slide';el.innerHTML=`<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>“${x[0]}”</blockquote><div class="author">${x[1]}</div><div class="role">${x[2]}</div></div>`;track.appendChild(el)})}
 function renderFAQ(t){const list=get('#faqList');if(!list)return;list.innerHTML='';t.faq.forEach((x,i)=>{const el=document.createElement('div');el.className='faq-item';el.innerHTML=`<button class="faq-question" aria-expanded="${i===0}">${x[0]}<span class="icon">+</span></button><div class="faq-answer">${x[1]}</div>`;const btn=el.querySelector('button');btn.addEventListener('click',()=>{const open=el.classList.contains('open');all('.faq-item').forEach(e=>{e.classList.remove('open');e.querySelector('button').setAttribute('aria-expanded','false')});if(!open){el.classList.add('open');btn.setAttribute('aria-expanded','true')}});list.appendChild(el)});list.firstElementChild?.classList.add('open')}
 let langCurrent=localStorage.getItem('alex-language')||'ru';
-const originalPortfolio=window.__alexPortfolioData;
-// Capture the portfolio dataset from the original inline script when available.
-if(!originalPortfolio){const imgs=all('#masonryGrid img');window.__alexPortfolioData=[]}
 const languageButton=get('#langToggle');languageButton?.addEventListener('click',()=>{langCurrent=langCurrent==='ru'?'en':'ru';setLanguage(langCurrent)});
-// Patch original data by reading its known runtime representation when possible.
-window.__alexPortfolioData=window.__alexPortfolioData||[];
-// Build from the original page's data URLs so the existing image set is preserved.
-
-// If the original script has already rendered the gallery, use its source image URLs from the cards.
-if(!window.__alexPortfolioData.length){window.__alexPortfolioData=portfolioData;}
-// Preserve lightbox behavior and improve accessibility/swipe.
+// ===== ЛАЙТБОКС: используем глобальные данные =====
 let lbIndex=0;let lbStartX=0;const lb=get('#lightbox');const lbImg=get('#lightboxImg');const lbTitle=get('#lightboxTitle');const lbDetails=get('#lightboxDetails');const lbCounter=get('#lightboxCounter');
 function openLB(i){lbIndex=i;updateLB();lb.classList.add('open');document.body.style.overflow='hidden';get('#lightboxClose')?.focus()}
-function updateLB(){const t=D[langCurrent],item=window.__alexPortfolioData[lbIndex];if(!item)return;lbImg.src=item.full || item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${window.__alexPortfolioData.length}`}
-function moveLB(dir){lbIndex=(lbIndex+dir+window.__alexPortfolioData.length)%window.__alexPortfolioData.length;updateLB()}
+function updateLB(){const t=D[langCurrent],data=window.__alexPortfolioData||[];const item=data[lbIndex];if(!item)return;lbImg.src=item.full || item.img;lbImg.alt=t.portfolio[lbIndex]?.[0]||item.title;lbTitle.textContent=t.portfolio[lbIndex]?.[0]||item.title;lbDetails.textContent=t.portfolio[lbIndex]?.[1]||item.details||'—';lbCounter.textContent=`${lbIndex+1} / ${data.length}`}
+function moveLB(dir){const data=window.__alexPortfolioData||[];if(!data.length)return;lbIndex=(lbIndex+dir+data.length)%data.length;updateLB()}
 window.__alexOpenLightbox=openLB;get('#lightboxPrev')?.addEventListener('click',()=>moveLB(-1));get('#lightboxNext')?.addEventListener('click',()=>moveLB(1));get('#lightboxClose')?.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''});lb?.addEventListener('touchstart',e=>{lbStartX=e.changedTouches[0].clientX},{passive:true});lb?.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lbStartX;if(Math.abs(dx)>50)moveLB(dx<0?1:-1)},{passive:true});
 all('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{setTimeout(()=>renderPortfolio(D[langCurrent],btn.dataset.filter),0)}));document.addEventListener('keydown',e=>{if(!lb?.classList.contains('open'))return;if(e.key==='ArrowRight')moveLB(1);if(e.key==='ArrowLeft')moveLB(-1);if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}});
-// Count-up stats once they enter the viewport.
+// Count-up stats
 const countObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting||e.target.dataset.counted)return;e.target.dataset.counted='1';const raw=e.target.textContent.trim();const m=raw.match(/(\d+)/);if(!m)return;const target=+m[1],suffix=raw.replace(m[1],'');let n=0;const step=Math.max(1,Math.ceil(target/35));const tick=()=>{n=Math.min(target,n+step);e.target.textContent=n+suffix;if(n<target)requestAnimationFrame(tick)};tick()}),{threshold:.7});all('.number,.hero-stat span').forEach(e=>countObserver.observe(e));
-// Stagger all reveal children.
 all('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%6,5)*.08}s`});
-// Preloader.
-const hidePreloader=()=>{const preloader=document.getElementById('preloader');if(!preloader)return;preloader.classList.add('is-hidden');setTimeout(()=>preloader.remove(),900);};
-// Do not wait for every external image: a single slow/blocked image must not freeze the entire site.
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>setTimeout(hidePreloader,350),{once:true});
-else setTimeout(hidePreloader,350);
-window.addEventListener('load',hidePreloader,{once:true});
-setTimeout(hidePreloader,3000);
+// Preloader: НАДЁЖНОЕ СКРЫТИЕ
+const hidePreloader=()=>{
+    const preloader=document.getElementById('preloader');
+    if(!preloader)return;
+    preloader.classList.add('is-hidden');
+    setTimeout(()=>{
+        if(preloader.parentNode) preloader.style.display='none';
+    },900);
+};
+// Множественные триггеры для надёжности
+if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>setTimeout(hidePreloader,350),{once:true});
+} else {
+    setTimeout(hidePreloader,350);
+}
+window.addEventListener('load',()=>{
+    // Дополнительная страховка: если прелоадер всё ещё виден через 2 секунды после load
+    setTimeout(hidePreloader,200);
+}, {once:true});
+// Экстренная страховка: максимум через 2.5 секунды убираем в любом случае
+setTimeout(hidePreloader,2500);
 setLanguage(langCurrent);
 })();
 </script>
