@@ -3,18 +3,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Sokolov | Street Photographer</title>
+    <title>Alex Sokolov — Уличный фотограф</title>
     <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
     <meta name="description" content="Алексей Соколов — уличный фотограф. Кинематографичные истории города, портреты и документальная фотография." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="canonical" href="https://alexsokolov.photography/" />
     <meta property="og:title" content="Alex Sokolov — Уличный фотограф" />
     <meta property="og:description" content="Уличная фотография, портреты и визуальные истории из городов мира." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alexsokolov.photography/" />
+    <meta property="og:image" content="https://alexsokolov.photography/images/hero.webp" />
+    <meta property="og:locale" content="ru_RU" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alex Sokolov — Уличный фотограф" />
+    <meta name="twitter:description" content="Уличная фотография, портреты и визуальные истории из городов мира." />
+    <meta name="twitter:image" content="https://alexsokolov.photography/images/hero.webp" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Sokolov",
+        "jobTitle": "Street Photographer",
+        "description": "Уличный фотограф, специализирующийся на портретной, архитектурной и документальной фотографии.",
+        "url": "https://alexsokolov.photography/",
+        "image": "https://alexsokolov.photography/images/about-photo.webp",
+        "sameAs": []
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
         /* ============================================================
@@ -539,6 +560,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
             font-family: var(--font-heading);
             font-size: 4.8rem;
             color: var(--yellow);
@@ -550,6 +572,13 @@
         .about-avatar:hover {
             transform: scale(1.01);
             box-shadow: var(--shadow-hover);
+        }
+
+        .about-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
         }
 
         .about-stats {
@@ -601,6 +630,10 @@
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.9;
             max-width: 600px;
+        }
+
+        .about-text + .about-text {
+            margin-top: 0;
         }
 
         .about-text strong {
@@ -1238,6 +1271,25 @@
             color: var(--yellow);
         }
 
+        .contact-info .detail-links {
+            margin-top: 12px;
+        }
+
+        .contact-info .detail-links a {
+            color: var(--yellow);
+            margin-right: 16px;
+            transition: color var(--transition);
+        }
+
+        .contact-info .detail-links a:last-child {
+            margin-right: 0;
+        }
+
+        .contact-info .detail-links a:hover,
+        .contact-info .detail-links a:focus-visible {
+            color: var(--orange);
+        }
+
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -1297,9 +1349,34 @@
             min-height: 110px;
         }
 
+        .contact-form input.invalid,
+        .contact-form select.invalid,
+        .contact-form textarea.invalid {
+            border-color: var(--orange);
+        }
+
+        .contact-form .checkbox-group.invalid {
+            outline: 2px solid var(--orange);
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+
+        .field-error {
+            display: block;
+            min-height: 16px;
+            margin-top: 4px;
+            font-size: 0.72rem;
+            color: var(--orange);
+        }
+
+        .checkbox-group .field-error {
+            flex-basis: 100%;
+        }
+
         .contact-form .checkbox-group {
             display: flex;
             align-items: flex-start;
+            flex-wrap: wrap;
             gap: 12px;
             margin: 4px 0;
         }
@@ -2240,7 +2317,7 @@
                 <div class="about-grid">
                     <div class="about-left reveal">
                         <div class="about-avatar">
-                            <img src="images/about-photo.webp" alt="Alex Sokolov" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+                            <img src="images/about-photo.webp" alt="Alex Sokolov" class="about-avatar-img" width="600" height="600">
                         </div>
                         <div class="about-stats">
                             <div class="stat-item">
@@ -2264,12 +2341,12 @@
                             Photography, for me, is more than creating beautiful images.<br />
                             It is about preserving moments that disappear in a fraction of a second.
                         </p>
-                        <p class="about-text" style="margin-top: 0;">
+                        <p class="about-text">
                             For over seven years I have explored cities, cultures and everyday life,
                             searching for authentic emotions, natural light and stories that deserve
                             to be remembered.
                         </p>
-                        <p class="about-text" style="margin-top: 0;">
+                        <p class="about-text">
                             Every photograph is a balance between composition, atmosphere and emotion.
                             My goal is not only to document reality, but to make people feel
                             as if they were standing inside that very moment.
@@ -2332,7 +2409,7 @@
                 <div class="services-header text-center reveal">
                     <span class="section-label">Services</span>
                     <h2 class="section-title">Photography tailored<br><span class="highlight">to every story.</span></h2>
-                    <p class="section-desc" style="margin: 6px auto 0;">
+                    <p class="section-desc">
                         Every session is carefully planned to create natural, timeless and expressive photographs.
                     </p>
                 </div>
@@ -2455,25 +2532,28 @@
                         <div class="detail"><span class="icon">📞</span> +7 999 123-45-67</div>
                         <div class="detail"><span class="icon">✉️</span> street@alexsokolov.photo</div>
                         <div class="detail"><span class="icon">📍</span> Moscow / Saint Petersburg</div>
-                        <div class="detail" style="margin-top:12px;">
-                            <a href="https://wa.me/79996379079" target="_blank" style="color:var(--yellow);margin-right:16px;">WhatsApp</a>
-                            <a href="https://t.me/bairmin" target="_blank" style="color:var(--yellow);">Telegram</a>
+                        <div class="detail detail-links">
+                            <a href="https://wa.me/79996379079" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                            <a href="https://t.me/bairmin" target="_blank" rel="noopener noreferrer">Telegram</a>
                         </div>
                     </div>
                     <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
                         <div class="form-row">
                             <div>
                                 <label for="formName">Name</label>
-                                <input type="text" id="formName" placeholder="Your name" required />
+                                <input type="text" id="formName" placeholder="Your name" required aria-describedby="formNameError" />
+                                <span class="field-error" id="formNameError" role="alert"></span>
                             </div>
                             <div>
                                 <label for="formPhone">Phone</label>
-                                <input type="tel" id="formPhone" placeholder="+7 999 123-45-67" required />
+                                <input type="tel" id="formPhone" placeholder="+7 999 123-45-67" required aria-describedby="formPhoneError" />
+                                <span class="field-error" id="formPhoneError" role="alert"></span>
                             </div>
                         </div>
                         <div>
                             <label for="formEmail">Email</label>
-                            <input type="email" id="formEmail" placeholder="you@example.com" required />
+                            <input type="email" id="formEmail" placeholder="you@example.com" required aria-describedby="formEmailError" />
+                            <span class="field-error" id="formEmailError" role="alert"></span>
                         </div>
                         <div>
                             <label for="formService">Service</label>
@@ -2490,8 +2570,9 @@
                             <textarea id="formComment" placeholder="Tell me about your idea..."></textarea>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="formConsent" required />
+                            <input type="checkbox" id="formConsent" required aria-describedby="formConsentError" />
                             <label for="formConsent">I agree to the processing of personal data</label>
+                            <span class="field-error" id="formConsentError" role="alert"></span>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
@@ -2624,8 +2705,9 @@
                     title: 'Final Frame', details: 'Europe' }
             ];
 
-            // ===== ГЛАВНОЕ: делаем данные доступными глобально =====
-            window.__alexPortfolioData = portfolioData;
+            // Shared namespace so the second script block (translations/lightbox) can access this data
+            window.AlexPortfolio = window.AlexPortfolio || {};
+            window.AlexPortfolio.data = portfolioData;
 
             // ========== DOM REFS ==========
             const header = document.getElementById('header');
@@ -2655,14 +2737,18 @@
 
             // ========== MOBILE MENU ==========
             mobileToggle.addEventListener('click', () => {
-                nav.classList.toggle('open');
-                mobileToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+                const isOpen = nav.classList.toggle('open');
+                mobileToggle.textContent = isOpen ? '✕' : '☰';
+                mobileToggle.setAttribute('aria-expanded', String(isOpen));
+                mobileToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
             });
 
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     nav.classList.remove('open');
                     mobileToggle.textContent = '☰';
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.setAttribute('aria-label', 'Открыть меню');
                 });
             });
 
@@ -2741,7 +2827,7 @@
                     div.className = 'masonry-item';
                     div.dataset.category = item.category;
                     div.innerHTML = `
-                            <img src="${item.img}" alt="${item.title}" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
+                            <img src="${item.img}" alt="${item.title}" loading="lazy" decoding="async" width="400" height="300" />
                             <span class="item-tag">${item.title}</span>
                         `;
                     div.addEventListener('click', () => {
@@ -2826,33 +2912,85 @@
             });
 
             // ========== CONTACT FORM ==========
+            const formMessages = {
+                ru: { required: 'Обязательное поле', email: 'Введите корректный email', consent: 'Необходимо согласие' },
+                en: { required: 'This field is required', email: 'Enter a valid email', consent: 'Consent is required' }
+            };
+
+            function setFieldError(input, errorEl, message) {
+                input.classList.add('invalid');
+                input.setAttribute('aria-invalid', 'true');
+                if (errorEl) errorEl.textContent = message;
+            }
+
+            function clearFieldError(input, errorEl) {
+                input.classList.remove('invalid');
+                input.removeAttribute('aria-invalid');
+                if (errorEl) errorEl.textContent = '';
+            }
+
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                const name = document.getElementById('formName').value.trim();
-                const phone = document.getElementById('formPhone').value.trim();
-                const email = document.getElementById('formEmail').value.trim();
-                const consent = document.getElementById('formConsent').checked;
+                const lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
+                const msg = formMessages[lang];
+
+                const nameInput = document.getElementById('formName');
+                const phoneInput = document.getElementById('formPhone');
+                const emailInput = document.getElementById('formEmail');
+                const consentInput = document.getElementById('formConsent');
+                const consentGroup = consentInput.closest('.checkbox-group');
+
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const email = emailInput.value.trim();
+                const consent = consentInput.checked;
 
                 let valid = true;
-                if (!name) { valid = false;
-                    document.getElementById('formName').style.borderColor = '#FF6B00'; } else { document
-                        .getElementById('formName').style.borderColor = ''; }
-                if (!phone) { valid = false;
-                    document.getElementById('formPhone').style.borderColor = '#FF6B00'; } else { document
-                        .getElementById('formPhone').style.borderColor = ''; }
-                if (!email || !email.includes('@')) { valid = false;
-                    document.getElementById('formEmail').style.borderColor = '#FF6B00'; } else { document
-                        .getElementById('formEmail').style.borderColor = ''; }
-                if (!consent) { valid = false;
-                    document.getElementById('formConsent').style.outline = '2px solid #FF6B00'; } else { document
-                        .getElementById('formConsent').style.outline = ''; }
+                let firstInvalid = null;
 
-                if (!valid) return;
+                if (!name) {
+                    valid = false;
+                    setFieldError(nameInput, document.getElementById('formNameError'), msg.required);
+                    firstInvalid = firstInvalid || nameInput;
+                } else {
+                    clearFieldError(nameInput, document.getElementById('formNameError'));
+                }
+
+                if (!phone) {
+                    valid = false;
+                    setFieldError(phoneInput, document.getElementById('formPhoneError'), msg.required);
+                    firstInvalid = firstInvalid || phoneInput;
+                } else {
+                    clearFieldError(phoneInput, document.getElementById('formPhoneError'));
+                }
+
+                if (!email || !email.includes('@')) {
+                    valid = false;
+                    setFieldError(emailInput, document.getElementById('formEmailError'), msg.email);
+                    firstInvalid = firstInvalid || emailInput;
+                } else {
+                    clearFieldError(emailInput, document.getElementById('formEmailError'));
+                }
+
+                if (!consent) {
+                    valid = false;
+                    consentGroup && consentGroup.classList.add('invalid');
+                    document.getElementById('formConsentError').textContent = msg.consent;
+                    firstInvalid = firstInvalid || consentInput;
+                } else {
+                    consentGroup && consentGroup.classList.remove('invalid');
+                    document.getElementById('formConsentError').textContent = '';
+                }
+
+                if (!valid) {
+                    firstInvalid && firstInvalid.focus();
+                    return;
+                }
 
                 contactForm.reset();
-                document.getElementById('formConsent').style.outline = '';
                 document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea')
-                    .forEach(el => el.style.borderColor = '');
+                    .forEach(el => el.classList.remove('invalid'));
+                consentGroup && consentGroup.classList.remove('invalid');
 
                 successModal.classList.add('open');
                 document.body.style.overflow = 'hidden';
@@ -2958,8 +3096,6 @@
                 }
             });
             modalObserver.observe(successModal, { attributes: true, attributeFilter: ['class'] });
-
-            console.log('🔥 Alex Sokolov — Street Photography | Premium Edition • UI Polish Complete');
         })();
     </script>
 
@@ -3251,7 +3387,7 @@
             }
 
             function renderPortfolio(t, filter) {
-                const data = window.__alexPortfolioData || [];
+                const data = window.AlexPortfolio.data || [];
                 const grid = get('#masonryGrid');
                 if (!grid) return;
                 const items = filter === 'all' ? data : data.filter(x => x.category === filter);
@@ -3268,7 +3404,7 @@
                         details = t.portfolio[globalIndex][1] || item.details || '—';
                     }
                     el.innerHTML = `
-                            <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" style="aspect-ratio:4/3;object-fit:cover">
+                            <img src="${item.img}" alt="${title}" loading="lazy" decoding="async" width="400" height="300">
                             <span class="item-tag">${title}</span>
                         `;
                     el.addEventListener('click', () => {
@@ -3276,7 +3412,7 @@
                         const filteredItems = filter === 'all' ? data : data.filter(x => x.category === filter);
                         const idxInFiltered = filteredItems.findIndex(x => x.id === item.id);
                         if (idxInFiltered !== -1) {
-                            window.__alexOpenLightbox && window.__alexOpenLightbox(idxInFiltered);
+                            window.AlexPortfolio.openLightbox && window.AlexPortfolio.openLightbox(idxInFiltered);
                         }
                     });
                     grid.appendChild(el);
@@ -3484,7 +3620,7 @@
             const lbCounter = get('#lightboxCounter');
 
             function getCurrentFilteredItems() {
-                const data = window.__alexPortfolioData || [];
+                const data = window.AlexPortfolio.data || [];
                 const activeFilter = get('.filter-btn.active');
                 const filter = activeFilter ? activeFilter.dataset.filter : 'all';
                 return filter === 'all' ? data : data.filter(x => x.category === filter);
@@ -3505,7 +3641,7 @@
                 if (!items.length) return;
                 const item = items[lbIndex];
                 if (!item) return;
-                const data = window.__alexPortfolioData || [];
+                const data = window.AlexPortfolio.data || [];
                 const globalIndex = data.findIndex(x => x.id === item.id);
                 const t = D[langCurrent];
                 let title = item.title;
@@ -3528,8 +3664,9 @@
                 updateLB();
             }
 
-            // Глобальный API для открытия lightbox из карточек
-            window.__alexOpenLightbox = openLB;
+            // Shared namespace API so the first script block can trigger the lightbox
+            window.AlexPortfolio = window.AlexPortfolio || {};
+            window.AlexPortfolio.openLightbox = openLB;
 
             // Lightbox controls
             get('#lightboxPrev')?.addEventListener('click', () => moveLB(-1));
@@ -3677,8 +3814,6 @@
                     updateLB();
                 }
             }, 100);
-
-            console.log('🌍 Language system initialized. Current:', langCurrent);
 
         })();
     </script>
